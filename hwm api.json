@@ -1,0 +1,3729 @@
+[
+  {
+    "index": 0,
+    "name": "工站 Bom",
+    "desc": null,
+    "add_time": 1684914938,
+    "up_time": 1684914938,
+    "list": [
+      {
+        "query_path": {
+          "path": "/bom",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "undone",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 2611,
+        "method": "POST",
+        "catid": 547,
+        "title": "添加Bom",
+        "path": "/bom",
+        "project_id": 53,
+        "req_params": [],
+        "res_body_type": "json",
+        "uid": 24,
+        "add_time": 1684978403,
+        "up_time": 1684979523,
+        "req_query": [],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "646ebf4321e9d8a394eb0124",
+            "name": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "req_body_form": [],
+        "__v": 0,
+        "desc": "",
+        "markdown": "",
+        "req_body_other": "{\"type\":\"object\",\"title\":\"title\",\"properties\":{\"product_id\":{\"type\":\"number\",\"mock\":{\"mock\":\"1\"}},\"station_name\":{\"type\":\"string\",\"mock\":{\"mock\":\"QT0\"}},\"uph\":{\"type\":\"number\",\"mock\":{\"mock\":\"20\"},\"description\":\"UPH\"},\"priority\":{\"type\":\"number\",\"mock\":{\"mock\":\"1\"},\"description\":\"优先级\"},\"partnumber_list\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"partnumber_id\":{\"type\":\"number\"},\"ratio\":{\"type\":\"number\",\"description\":\"配比\"},\"back_up_ratio\":{\"type\":\"number\",\"description\":\"back up 系数  (小数)\"}},\"required\":[\"partnumber_id\",\"ratio\",\"back_up_ratio\"]}}},\"required\":[\"product_id\",\"station_name\",\"uph\",\"priority\",\"partnumber_list\"]}",
+        "req_body_type": "json",
+        "res_body": "{\"type\":\"object\",\"title\":\"title\",\"properties\":{}}"
+      },
+      {
+        "query_path": {
+          "path": "/bom",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "undone",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 2614,
+        "method": "PUT",
+        "catid": 547,
+        "title": "编辑Bom",
+        "path": "/bom",
+        "project_id": 53,
+        "req_params": [],
+        "res_body_type": "json",
+        "uid": 24,
+        "add_time": 1684978887,
+        "up_time": 1684979711,
+        "req_query": [],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "646ebfff21e9d8ff58eb0125",
+            "name": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "req_body_form": [],
+        "__v": 0,
+        "desc": "",
+        "markdown": "",
+        "req_body_other": "{\"type\":\"object\",\"title\":\"title\",\"properties\":{\"product_id\":{\"type\":\"number\",\"description\":\"非必须\"},\"station_name\":{\"type\":\"string\",\"description\":\"非必须\"},\"uph\":{\"type\":\"number\",\"description\":\"非必须\"},\"priority\":{\"type\":\"number\",\"description\":\"非必须\"},\"partnumber_list\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"partnumber_id\":{\"type\":\"number\"},\"ratio\":{\"type\":\"number\"},\"back_up_ratio\":{\"type\":\"number\"}},\"required\":[\"partnumber_id\",\"ratio\",\"back_up_ratio\"]},\"description\":\"非必须\"},\"id\":{\"type\":\"number\",\"description\":\"必须\"}},\"required\":[\"product_id\",\"station_name\",\"uph\",\"priority\",\"partnumber_list\",\"id\"]}",
+        "req_body_type": "json",
+        "res_body": "{\"type\":\"object\",\"title\":\"title\",\"properties\":{}}"
+      },
+      {
+        "query_path": {
+          "path": "/bom/page",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "undone",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 2608,
+        "method": "GET",
+        "catid": 547,
+        "title": "获取bom分页",
+        "path": "/bom/page",
+        "project_id": 53,
+        "req_params": [],
+        "res_body_type": "json",
+        "uid": 24,
+        "add_time": 1684917980,
+        "up_time": 1685330021,
+        "req_query": [
+          {
+            "required": "0",
+            "_id": "6474186521e9d8d80beb0213",
+            "name": "product_id",
+            "example": "1",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "6474186521e9d83504eb0212",
+            "name": "station_name",
+            "example": "QT0",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "6474186521e9d86f42eb0211",
+            "name": "bom_name",
+            "example": "qt",
+            "desc": "模糊查找"
+          },
+          {
+            "required": "1",
+            "_id": "6474186521e9d84d0eeb0210",
+            "name": "page_index",
+            "example": "",
+            "desc": ""
+          },
+          {
+            "required": "1",
+            "_id": "6474186521e9d8134feb020f",
+            "name": "per_page",
+            "example": "",
+            "desc": ""
+          }
+        ],
+        "req_headers": [],
+        "req_body_form": [],
+        "__v": 0,
+        "desc": "",
+        "markdown": "",
+        "res_body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"msg\":{\"type\":\"string\"},\"code\":{\"type\":\"number\"},\"result\":{\"type\":\"object\",\"properties\":{\"current_page\":{\"type\":\"number\"},\"page_count\":{\"type\":\"number\"},\"total_page\":{\"type\":\"number\"},\"total_count\":{\"type\":\"number\"},\"bom_list\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"name\":{\"type\":\"string\",\"description\":\"bom名称\"},\"product\":{\"type\":\"string\",\"description\":\"产品\"},\"product_id\":{\"type\":\"number\"},\"station_name\":{\"type\":\"string\",\"description\":\"工站名\"},\"uph\":{\"type\":\"number\",\"mock\":{\"mock\":\"30\"},\"description\":\"UPH\"},\"priority\":{\"type\":\"number\",\"description\":\"优先级\"},\"updated_by\":{\"type\":\"number\"},\"id\":{\"type\":\"number\",\"description\":\"bom id\"},\"updated_time\":{\"type\":\"string\"},\"partnumber_list\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"partnumber\":{\"type\":\"object\",\"properties\":{},\"description\":\"partnumber\"},\"ratio\":{\"type\":\"number\",\"mock\":{\"mock\":\"1\"},\"description\":\"配比\"},\"back_up_ratio\":{\"type\":\"number\",\"mock\":{\"mock\":\"0.1\"},\"description\":\"back up 系数\"}},\"required\":[\"partnumber\",\"ratio\",\"back_up_ratio\"]}}},\"required\":[\"name\",\"product\",\"station_name\",\"uph\",\"priority\",\"updated_by\",\"id\",\"partnumber_list\",\"updated_time\",\"product_id\"]}}},\"required\":[\"bom_list\"]}}}"
+      }
+    ]
+  },
+  {
+    "index": 0,
+    "name": "EQlist",
+    "desc": null,
+    "add_time": 1685062943,
+    "up_time": 1685062943,
+    "list": [
+      {
+        "query_path": {
+          "path": "/task/target",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "undone",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 2626,
+        "method": "DELETE",
+        "catid": 556,
+        "title": "删除EQ回复的bom",
+        "path": "/task/target",
+        "project_id": 53,
+        "req_params": [],
+        "res_body_type": "json",
+        "uid": 24,
+        "add_time": 1685063675,
+        "up_time": 1685063726,
+        "req_query": [
+          {
+            "required": "1",
+            "_id": "6470082e21e9d881deeb0143",
+            "name": "targer_id",
+            "example": "1",
+            "desc": ""
+          },
+          {
+            "required": "1",
+            "_id": "6470082e21e9d86846eb0142",
+            "name": "bom_id",
+            "example": "1",
+            "desc": ""
+          }
+        ],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "6470082e21e9d830bceb0144",
+            "name": "Content-Type",
+            "value": "application/x-www-form-urlencoded"
+          }
+        ],
+        "req_body_form": [],
+        "__v": 0,
+        "desc": "",
+        "markdown": "",
+        "req_body_type": "form",
+        "res_body": ""
+      },
+      {
+        "query_path": {
+          "path": "/task/target",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "undone",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 2620,
+        "method": "POST",
+        "catid": 556,
+        "title": "将bom拷贝进目标工站",
+        "path": "/task/target",
+        "project_id": 53,
+        "req_params": [],
+        "res_body_type": "json",
+        "uid": 24,
+        "add_time": 1685063173,
+        "up_time": 1685063374,
+        "req_query": [],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "647006ce21e9d87f9aeb0138",
+            "name": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "req_body_form": [],
+        "__v": 0,
+        "desc": "",
+        "markdown": "",
+        "req_body_other": "{\"type\":\"object\",\"title\":\"title\",\"properties\":{\"target_id\":{\"type\":\"string\"},\"bom_id\":{\"type\":\"string\",\"description\":\"要拷贝的bom_id\"},\"number\":{\"type\":\"string\",\"description\":\"bom的数量\"}},\"required\":[\"target_id\",\"bom_id\",\"number\"]}",
+        "req_body_type": "json",
+        "res_body": ""
+      },
+      {
+        "query_path": {
+          "path": "/task/target",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "undone",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 2623,
+        "method": "PUT",
+        "catid": 556,
+        "title": "编辑EQ回复的bom数量",
+        "path": "/task/target",
+        "project_id": 53,
+        "req_params": [],
+        "res_body_type": "json",
+        "uid": 24,
+        "add_time": 1685063429,
+        "up_time": 1685063615,
+        "req_query": [],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "647007bf21e9d8d49beb0141",
+            "name": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "req_body_form": [],
+        "__v": 0,
+        "desc": "",
+        "markdown": "",
+        "req_body_other": "{\"type\":\"object\",\"title\":\"title\",\"properties\":{\"target_id\":{\"type\":\"number\"},\"bom_id\":{\"type\":\"number\"},\"number\":{\"type\":\"number\"}},\"required\":[\"target_id\",\"bom_id\",\"number\"]}",
+        "req_body_type": "json",
+        "res_body": "{\"type\":\"object\",\"title\":\"title\",\"properties\":{}}"
+      },
+      {
+        "query_path": {
+          "path": "/eqlist/page",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "undone",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 2629,
+        "method": "GET",
+        "catid": 556,
+        "title": "获取EQlist",
+        "path": "/eqlist/page",
+        "project_id": 53,
+        "req_params": [],
+        "res_body_type": "json",
+        "uid": 24,
+        "add_time": 1685064807,
+        "up_time": 1685069269,
+        "req_query": [
+          {
+            "required": "1",
+            "_id": "64701dd521e9d88b87eb0161",
+            "name": "page_index",
+            "desc": ""
+          },
+          {
+            "required": "1",
+            "_id": "64701dd521e9d85d0ceb0160",
+            "name": "per_page",
+            "example": "",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "64701dd521e9d843a1eb015f",
+            "name": "product_id",
+            "example": "",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "64701dd521e9d809d8eb015e",
+            "name": "phase_id",
+            "example": "",
+            "desc": ""
+          }
+        ],
+        "req_headers": [],
+        "req_body_form": [],
+        "__v": 0,
+        "desc": "",
+        "markdown": "",
+        "res_body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"msg\":{\"type\":\"string\"},\"code\":{\"type\":\"number\"},\"result\":{\"type\":\"object\",\"properties\":{\"current_page\":{\"type\":\"number\"},\"page_count\":{\"type\":\"number\"},\"total_page\":{\"type\":\"number\"},\"total_count\":{\"type\":\"number\"},\"eqlists\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"name\":{\"type\":\"string\"},\"id\":{\"type\":\"string\"},\"product\":{\"type\":\"string\"},\"phase\":{\"type\":\"string\"},\"updated_time\":{\"type\":\"string\"},\"file_url\":{\"type\":\"string\"}},\"required\":[\"name\",\"id\",\"product\",\"phase\",\"updated_time\",\"file_url\"]}}},\"required\":[\"eqlists\"]}}}"
+      },
+      {
+        "query_path": {
+          "path": "/eqlist_sub_task",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "undone",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 2617,
+        "method": "GET",
+        "catid": 556,
+        "title": "获取EQlist子任务回复内容",
+        "path": "/eqlist_sub_task",
+        "project_id": 53,
+        "req_params": [],
+        "res_body_type": "json",
+        "uid": 24,
+        "add_time": 1684984158,
+        "up_time": 1685330105,
+        "req_query": [
+          {
+            "required": "1",
+            "_id": "647418b921e9d88662eb0214",
+            "name": "sub_task_id",
+            "example": "1",
+            "desc": ""
+          }
+        ],
+        "req_headers": [],
+        "req_body_form": [],
+        "__v": 0,
+        "desc": "",
+        "markdown": "",
+        "res_body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"msg\":{\"type\":\"string\"},\"code\":{\"type\":\"number\"},\"result\":{\"type\":\"object\",\"properties\":{\"station_list\":{\"type\":\"object\",\"properties\":{\"station_name\":{\"type\":\"string\"},\"target_id\":{\"type\":\"number\"},\"station_id\":{\"type\":\"number\"},\"station_test_rule\":{\"type\":\"string\"},\"station_type\":{\"type\":\"string\"},\"fxdri\":{\"type\":\"string\"},\"big_line_name\":{\"type\":\"string\"},\"big_line_id\":{\"type\":\"number\"},\"floor\":{\"type\":\"string\"},\"small_line_id\":{\"type\":\"number\"},\"small_line_name\":{\"type\":\"string\"},\"small_line_uph\":{\"type\":\"number\"},\"function\":{\"type\":\"string\"},\"bom_list\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"bom_name\":{\"type\":\"string\"},\"bom_id\":{\"type\":\"number\"},\"bom_uph\":{\"type\":\"number\"},\"bom_priority\":{\"type\":\"number\"},\"station_name\":{\"type\":\"string\"},\"product\":{\"type\":\"string\"},\"updated_by\":{\"type\":\"string\"},\"product_id\":{\"type\":\"string\"},\"updated_time\":{\"type\":\"string\"},\"bom_number\":{\"type\":\"number\",\"description\":\"bom的数量\"},\"partnumber_list\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"partnumber\":{\"type\":\"object\",\"properties\":{}},\"ratio\":{\"type\":\"number\"},\"back_up_ratio\":{\"type\":\"number\",\"mock\":{\"mock\":\"0.1\"},\"description\":\"小数\"}},\"required\":[\"partnumber\",\"ratio\",\"back_up_ratio\"]}}},\"required\":[\"bom_name\",\"bom_id\",\"bom_uph\",\"bom_priority\",\"station_name\",\"product\",\"updated_by\",\"updated_time\",\"partnumber_list\",\"bom_number\",\"product_id\"]}}},\"required\":[\"station_name\",\"station_id\",\"big_line_name\",\"big_line_id\",\"floor\",\"small_line_id\",\"small_line_name\",\"small_line_uph\",\"station_test_rule\",\"station_type\",\"fxdri\",\"bom_list\",\"target_id\",\"function\"]}},\"required\":[\"station_list\"]}}}"
+      },
+      {
+        "query_path": {
+          "path": "/eqlist/record",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "undone",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 2635,
+        "method": "GET",
+        "catid": 556,
+        "title": "获取EQlist所有单条记录",
+        "path": "/eqlist/record",
+        "project_id": 53,
+        "req_params": [],
+        "res_body_type": "json",
+        "uid": 24,
+        "add_time": 1685066552,
+        "up_time": 1685068727,
+        "req_query": [
+          {
+            "required": "1",
+            "_id": "64701bb721e9d886faeb015d",
+            "name": "eqlist_id",
+            "example": "1",
+            "desc": ""
+          }
+        ],
+        "req_headers": [],
+        "req_body_form": [],
+        "__v": 0,
+        "desc": "",
+        "markdown": "",
+        "res_body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"msg\":{\"type\":\"string\"},\"code\":{\"type\":\"number\"},\"result\":{\"type\":\"object\",\"properties\":{\"recode_list\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"partnumber\":{\"type\":\"object\",\"properties\":{},\"description\":\"partnumber对象\"},\"need_qty\":{\"type\":\"number\",\"description\":\"partnumber 数量\"},\"back_up_qty\":{\"type\":\"number\"},\"station_name\":{\"type\":\"string\"},\"station_id\":{\"type\":\"number\"},\"big_line_name\":{\"type\":\"string\"},\"big_line_id\":{\"type\":\"number\"},\"floor\":{\"type\":\"string\"},\"small_line_id\":{\"type\":\"number\"},\"small_line_name\":{\"type\":\"string\"},\"station_type\":{\"type\":\"string\"},\"function\":{\"type\":\"string\"}},\"required\":[\"partnumber\",\"need_qty\",\"back_up_qty\",\"station_name\",\"station_id\",\"big_line_name\",\"big_line_id\",\"floor\",\"small_line_id\",\"small_line_name\",\"station_type\",\"function\"]}}},\"required\":[\"recode_list\"]}}}"
+      },
+      {
+        "query_path": {
+          "path": "/eqlist",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "undone",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 2632,
+        "method": "GET",
+        "catid": 556,
+        "title": "获取EQlist详情",
+        "path": "/eqlist",
+        "project_id": 53,
+        "req_params": [],
+        "res_body_type": "json",
+        "uid": 24,
+        "add_time": 1685065773,
+        "up_time": 1685066393,
+        "req_query": [
+          {
+            "required": "1",
+            "_id": "6470129921e9d89ef6eb015a",
+            "name": "eqlist_id",
+            "desc": ""
+          }
+        ],
+        "req_headers": [],
+        "req_body_form": [],
+        "__v": 0,
+        "desc": "",
+        "markdown": "",
+        "res_body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"msg\":{\"type\":\"string\"},\"code\":{\"type\":\"number\"},\"result\":{\"type\":\"object\",\"properties\":{\"station_list\":{\"type\":\"object\",\"properties\":{\"station_name\":{\"type\":\"string\"},\"station_id\":{\"type\":\"number\"},\"big_line_name\":{\"type\":\"string\"},\"big_line_id\":{\"type\":\"number\"},\"floor\":{\"type\":\"string\"},\"small_line_id\":{\"type\":\"number\"},\"small_line_name\":{\"type\":\"string\"},\"small_line_uph\":{\"type\":\"number\"},\"station_test_rule\":{\"type\":\"string\"},\"station_type\":{\"type\":\"string\"},\"fxdri\":{\"type\":\"string\"},\"target_id\":{\"type\":\"number\"},\"function\":{\"type\":\"string\"},\"bom_list\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"bom_name\":{\"type\":\"string\"},\"bom_id\":{\"type\":\"number\"},\"bom_uph\":{\"type\":\"number\"},\"bom_priority\":{\"type\":\"number\"},\"station_name\":{\"type\":\"string\"},\"product\":{\"type\":\"string\"},\"updated_by\":{\"type\":\"string\"},\"updated_time\":{\"type\":\"string\"},\"bom_number\":{\"type\":\"string\"},\"partnumber_list\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"partnumber\":{\"type\":\"object\",\"properties\":{}},\"ratio\":{\"type\":\"string\"},\"back_up_ratio\":{\"type\":\"string\"}},\"required\":[\"partnumber\",\"ratio\",\"back_up_ratio\"]}}},\"required\":[\"bom_name\",\"bom_id\",\"bom_uph\",\"bom_priority\",\"station_name\",\"product\",\"updated_by\",\"updated_time\",\"bom_number\",\"partnumber_list\"]}}},\"required\":[\"target_id\",\"function\"]}}}}}"
+      }
+    ]
+  },
+  {
+    "index": 0,
+    "name": "预算",
+    "desc": null,
+    "add_time": 1685071496,
+    "up_time": 1685071496,
+    "list": [
+      {
+        "query_path": {
+          "path": "/budget/detail/number",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "undone",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 2680,
+        "method": "DELETE",
+        "catid": 565,
+        "title": "删除每比预算详情记录的数量",
+        "path": "/budget/detail/number",
+        "project_id": 53,
+        "req_params": [],
+        "res_body_type": "json",
+        "uid": 24,
+        "add_time": 1685327671,
+        "up_time": 1685327742,
+        "req_query": [
+          {
+            "required": "1",
+            "_id": "64740f7e21e9d839c6eb0208",
+            "name": "detail_number_id",
+            "example": "1",
+            "desc": ""
+          }
+        ],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "64740f7e21e9d80bc1eb0209",
+            "name": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "req_body_form": [],
+        "__v": 0,
+        "desc": "",
+        "markdown": "",
+        "req_body_other": "{\"type\":\"object\",\"title\":\"title\",\"properties\":{\"\":{\"type\":\"string\"}},\"required\":[\"\"]}",
+        "req_body_type": "json",
+        "res_body": "{\"type\":\"object\",\"title\":\"title\",\"properties\":{}}"
+      },
+      {
+        "query_path": {
+          "path": "/budget",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "undone",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 2647,
+        "method": "DELETE",
+        "catid": 565,
+        "title": "删除预算",
+        "path": "/budget",
+        "project_id": 53,
+        "req_params": [],
+        "res_body_type": "json",
+        "uid": 24,
+        "add_time": 1685079528,
+        "up_time": 1685079659,
+        "req_query": [
+          {
+            "required": "1",
+            "_id": "6470466b21e9d8fbd2eb018f",
+            "name": "budget_id",
+            "example": "1",
+            "desc": ""
+          }
+        ],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "6470466b21e9d86955eb0190",
+            "name": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "req_body_form": [],
+        "__v": 0,
+        "desc": "",
+        "markdown": "",
+        "req_body_other": "{\"type\":\"object\",\"title\":\"title\",\"properties\":{}}",
+        "req_body_type": "json",
+        "res_body": "{\"type\":\"object\",\"title\":\"title\",\"properties\":{}}"
+      },
+      {
+        "query_path": {
+          "path": "/budget/detail",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "undone",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 2668,
+        "method": "POST",
+        "catid": 565,
+        "title": "新增一笔预算详情",
+        "path": "/budget/detail",
+        "project_id": 53,
+        "req_params": [],
+        "res_body_type": "json",
+        "uid": 24,
+        "add_time": 1685323341,
+        "up_time": 1685323898,
+        "req_query": [],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "6474007a21e9d80b34eb01c7",
+            "name": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "req_body_form": [],
+        "__v": 0,
+        "desc": "",
+        "markdown": "",
+        "req_body_other": "{\"type\":\"object\",\"title\":\"title\",\"properties\":{\"budget_id\":{\"type\":\"number\"},\"partnumber_id\":{\"type\":\"string\"}},\"required\":[\"budget_id\",\"partnumber_id\"]}",
+        "req_body_type": "json",
+        "res_body": "{\"type\":\"object\",\"title\":\"title\",\"properties\":{}}"
+      },
+      {
+        "query_path": {
+          "path": "/budget/detail/number",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "undone",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 2677,
+        "method": "POST",
+        "catid": 565,
+        "title": "新增每比预算详情记录的数量",
+        "path": "/budget/detail/number",
+        "project_id": 53,
+        "req_params": [],
+        "res_body_type": "json",
+        "uid": 24,
+        "add_time": 1685327308,
+        "up_time": 1685327617,
+        "req_query": [],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "64740f0121e9d844e5eb0206",
+            "name": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "req_body_form": [],
+        "__v": 0,
+        "desc": "",
+        "markdown": "",
+        "req_body_other": "{\"type\":\"object\",\"title\":\"title\",\"properties\":{\"recode_id\":{\"type\":\"string\"}},\"required\":[\"recode_id\"]}",
+        "req_body_type": "json",
+        "res_body": "{\"type\":\"object\",\"title\":\"title\",\"properties\":{\"function\":{\"type\":\"string\"},\"total_demand_qty\":{\"type\":\"number\"}},\"required\":[\"function\",\"total_demand_qty\"]}"
+      },
+      {
+        "query_path": {
+          "path": "/budget",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "undone",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 2641,
+        "method": "POST",
+        "catid": 565,
+        "title": "新增预算",
+        "path": "/budget",
+        "project_id": 53,
+        "req_params": [],
+        "res_body_type": "json",
+        "uid": 24,
+        "add_time": 1685072489,
+        "up_time": 1685079229,
+        "req_query": [],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "647044bd21e9d8d039eb0189",
+            "name": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "req_body_form": [],
+        "__v": 0,
+        "desc": "",
+        "markdown": "",
+        "req_body_other": "{\"type\":\"object\",\"title\":\"title\",\"properties\":{\"product_id\":{\"type\":\"string\"},\"phase_id\":{\"type\":\"string\"},\"eqlist_task_id\":{\"type\":\"string\"},\"type\":{\"type\":\"string\"},\"name\":{\"type\":\"string\"}},\"required\":[\"product_id\",\"phase_id\",\"eqlist_task_id\",\"type\",\"name\"]}",
+        "req_body_type": "json",
+        "res_body": "{\"type\":\"object\",\"title\":\"title\",\"properties\":{}}"
+      },
+      {
+        "query_path": {
+          "path": "/budget",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "undone",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 2644,
+        "method": "PUT",
+        "catid": 565,
+        "title": "编辑预算",
+        "path": "/budget",
+        "project_id": 53,
+        "req_params": [],
+        "res_body_type": "json",
+        "uid": 24,
+        "add_time": 1685079324,
+        "up_time": 1685345992,
+        "req_query": [],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "647456c821e9d8117feb0215",
+            "name": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "req_body_form": [],
+        "__v": 0,
+        "desc": "",
+        "markdown": "",
+        "req_body_other": "{\"type\":\"object\",\"title\":\"title\",\"properties\":{\"status\":{\"type\":\"string\",\"description\":\"非必须\"},\"name\":{\"type\":\"string\",\"description\":\"非必须\"},\"budget_id\":{\"type\":\"string\",\"description\":\"必须\"}},\"required\":[\"status\",\"name\",\"budget_id\"]}",
+        "req_body_type": "json",
+        "res_body": ""
+      },
+      {
+        "query_path": {
+          "path": "/budget/detail",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "undone",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 2671,
+        "method": "PUT",
+        "catid": 565,
+        "title": "编辑预算详情",
+        "path": "/budget/detail",
+        "project_id": 53,
+        "req_params": [],
+        "res_body_type": "json",
+        "uid": 24,
+        "add_time": 1685323957,
+        "up_time": 1685326401,
+        "req_query": [],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "64740a4121e9d87e97eb01d0",
+            "name": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "req_body_form": [],
+        "__v": 0,
+        "desc": "",
+        "markdown": "",
+        "req_body_other": "{\"type\":\"object\",\"title\":\"title\",\"properties\":{\"recode_id\":{\"type\":\"number\",\"description\":\"一笔预算详情id\"},\"addition\":{\"type\":\"string\"},\"wk\":{\"type\":\"string\"},\"buyer\":{\"type\":\"string\"},\"user_dri\":{\"type\":\"string\"},\"user_department\":{\"type\":\"string\"},\"user_department_manager\":{\"type\":\"string\"},\"user_code\":{\"type\":\"string\"},\"apple_counterpart\":{\"type\":\"string\"},\"reimburse_confirm\":{\"type\":\"boolean\"},\"emergency_purchase\":{\"type\":\"boolean\"},\"reason_demand\":{\"type\":\"string\"}},\"required\":[\"recode_id\",\"addition\",\"wk\",\"buyer\",\"user_dri\",\"user_department\",\"user_department_manager\",\"user_code\",\"apple_counterpart\",\"reimburse_confirm\",\"emergency_purchase\",\"reason_demand\"]}",
+        "req_body_type": "json",
+        "res_body": "{\"type\":\"object\",\"title\":\"title\",\"properties\":{\"field_27\":{\"type\":\"string\"}},\"required\":[\"field_27\"]}"
+      },
+      {
+        "query_path": {
+          "path": "/budget/page",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "undone",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 2638,
+        "method": "GET",
+        "catid": 565,
+        "title": "获取预算列表",
+        "path": "/budget/page",
+        "project_id": 53,
+        "req_params": [],
+        "res_body_type": "json",
+        "uid": 24,
+        "add_time": 1685071584,
+        "up_time": 1685072382,
+        "req_query": [
+          {
+            "required": "0",
+            "_id": "647029fe21e9d8a81eeb0184",
+            "name": "product_id",
+            "example": "1",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "647029fe21e9d8f13eeb0183",
+            "name": "phase_id",
+            "example": "1",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "647029fe21e9d86778eb0182",
+            "name": "type",
+            "example": "initial",
+            "desc": "initial  alternate      (初版预算和候补预算)"
+          },
+          {
+            "required": "1",
+            "_id": "647029fe21e9d8453deb0181",
+            "name": "page_index",
+            "example": "1",
+            "desc": ""
+          },
+          {
+            "required": "1",
+            "_id": "647029fe21e9d81a8deb0180",
+            "name": "per_page",
+            "example": "1",
+            "desc": ""
+          }
+        ],
+        "req_headers": [],
+        "req_body_form": [],
+        "__v": 0,
+        "desc": "",
+        "markdown": "",
+        "res_body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"msg\":{\"type\":\"string\"},\"code\":{\"type\":\"number\"},\"result\":{\"type\":\"object\",\"properties\":{\"current_page\":{\"type\":\"number\"},\"page_count\":{\"type\":\"number\"},\"total_page\":{\"type\":\"number\"},\"total_count\":{\"type\":\"number\"},\"budget_list\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"product\":{\"type\":\"string\"},\"phase\":{\"type\":\"string\"},\"type\":{\"type\":\"string\",\"description\":\"initial  alternate      (初版预算和候补预算)\"},\"status\":{\"type\":\"string\",\"description\":\"lock  unlocked   (已锁定、未锁定)\"},\"updated_time\":{\"type\":\"string\"},\"name\":{\"type\":\"string\"},\"id\":{\"type\":\"string\"},\"file_url_common\":{\"type\":\"string\"},\"file_url_consign\":{\"type\":\"string\"}},\"required\":[\"product\",\"phase\",\"type\",\"status\",\"updated_time\",\"name\",\"id\",\"file_url_common\",\"file_url_consign\"]}}},\"required\":[\"budget_list\"]}}}"
+      },
+      {
+        "query_path": {
+          "path": "/budget",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "undone",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 2653,
+        "method": "GET",
+        "catid": 565,
+        "title": "获取预算详情",
+        "path": "/budget",
+        "project_id": 53,
+        "req_params": [],
+        "res_body_type": "json",
+        "uid": 24,
+        "add_time": 1685081571,
+        "up_time": 1685326783,
+        "req_query": [
+          {
+            "required": "1",
+            "_id": "64740bbf21e9d80294eb01d7",
+            "name": "budget_id",
+            "example": "1",
+            "desc": ""
+          }
+        ],
+        "req_headers": [],
+        "req_body_form": [],
+        "__v": 0,
+        "desc": "",
+        "markdown": "",
+        "res_body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"msg\":{\"type\":\"string\"},\"code\":{\"type\":\"number\"},\"result\":{\"type\":\"object\",\"properties\":{\"recode_list\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"partnumber\":{\"type\":\"object\",\"properties\":{}},\"recode_id\":{\"type\":\"string\",\"description\":\"记录id\"},\"small_line\":{\"type\":\"string\",\"description\":\"小线体\"},\"status\":{\"type\":\"string\",\"description\":\"replied   not_replied  (已回复 未回复)\"},\"updated_time\":{\"type\":\"string\"},\"updated_by\":{\"type\":\"string\"},\"total_purchase_qty\":{\"type\":\"number\",\"description\":\"总购买数量\"},\"additional\":{\"type\":\"number\",\"description\":\"购买总金额\"},\"addition\":{\"type\":\"string\",\"description\":\"(N 新增、Q升级)\"},\"wk\":{\"type\":\"number\",\"description\":\"购买周期\"},\"buyer\":{\"type\":\"string\",\"description\":\"Buyer\"},\"user_dri\":{\"type\":\"string\",\"description\":\"User DRI\"},\"user_department\":{\"type\":\"string\",\"description\":\"User Dept\"},\"user_department_manager\":{\"type\":\"string\",\"description\":\"User Dept. Manager\"},\"user_code\":{\"type\":\"string\",\"description\":\"User Code\"},\"apple_counterpart\":{\"type\":\"string\",\"description\":\"Apple counterpart\"},\"reimburse_confirm\":{\"type\":\"boolean\",\"description\":\"Reimburse客戶確認資訊\"},\"emergency_purchase\":{\"type\":\"boolean\",\"description\":\"是否已下緊急採購單\"},\"reason_demand\":{\"type\":\"string\",\"description\":\"需求原因\"},\"demand_list\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"function\":{\"type\":\"string\"},\"total_demand_qty\":{\"type\":\"number\"},\"updated_by\":{\"type\":\"string\"},\"updated_time\":{\"type\":\"string\"}},\"required\":[\"function\",\"total_demand_qty\",\"updated_by\",\"updated_time\"]},\"description\":\"需求数量列表\"}},\"required\":[\"partnumber\",\"small_line\",\"status\",\"total_purchase_qty\",\"additional\",\"addition\",\"wk\",\"buyer\",\"user_dri\",\"user_department\",\"user_department_manager\",\"user_code\",\"apple_counterpart\",\"reimburse_confirm\",\"emergency_purchase\",\"reason_demand\",\"updated_time\",\"updated_by\",\"demand_list\",\"recode_id\"]}}},\"required\":[\"recode_list\"]}}}"
+      }
+    ]
+  },
+  {
+    "index": 0,
+    "name": "任務管理",
+    "desc": null,
+    "add_time": 1685079657,
+    "up_time": 1685079657,
+    "list": [
+      {
+        "query_path": {
+          "path": "/task",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "undone",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 2659,
+        "method": "PUT",
+        "catid": 574,
+        "title": "修改主任務",
+        "path": "/task",
+        "project_id": 53,
+        "req_params": [],
+        "res_body_type": "json",
+        "uid": 65,
+        "add_time": 1685090136,
+        "up_time": 1685090182,
+        "req_query": [
+          {
+            "required": "1",
+            "_id": "64706f8621e9d84cf7eb01ae",
+            "name": "task_id",
+            "desc": ""
+          }
+        ],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "64706f8621e9d8611aeb01af",
+            "name": "Content-Type",
+            "value": "application/x-www-form-urlencoded"
+          }
+        ],
+        "req_body_form": [
+          {
+            "required": "0",
+            "_id": "64706f8621e9d87ee8eb01b1",
+            "name": "task_name",
+            "type": "text"
+          },
+          {
+            "required": "0",
+            "_id": "64706f8621e9d842e5eb01b0",
+            "name": "reply_group",
+            "type": "text",
+            "example": "",
+            "desc": ""
+          }
+        ],
+        "__v": 0,
+        "desc": "",
+        "markdown": "",
+        "req_body_type": "form",
+        "res_body": ""
+      },
+      {
+        "query_path": {
+          "path": "/task",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "undone",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 2662,
+        "method": "DELETE",
+        "catid": 574,
+        "title": "刪除主任務",
+        "path": "/task",
+        "project_id": 53,
+        "req_params": [],
+        "res_body_type": "json",
+        "uid": 65,
+        "add_time": 1685090222,
+        "up_time": 1685090238,
+        "req_query": [
+          {
+            "required": "1",
+            "_id": "64706fbe21e9d81801eb01b4",
+            "name": "task_id",
+            "desc": ""
+          }
+        ],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "64706fbe21e9d81489eb01b5",
+            "name": "Content-Type",
+            "value": "application/x-www-form-urlencoded"
+          }
+        ],
+        "req_body_form": [],
+        "__v": 0,
+        "desc": "",
+        "markdown": "",
+        "req_body_type": "form",
+        "res_body": ""
+      },
+      {
+        "query_path": {
+          "path": "/task_reply",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "undone",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 2674,
+        "method": "DELETE",
+        "catid": 574,
+        "title": "刪除任務回復",
+        "path": "/task_reply",
+        "project_id": 53,
+        "req_params": [],
+        "res_body_type": "json",
+        "uid": 65,
+        "add_time": 1685326330,
+        "up_time": 1685327525,
+        "req_query": [
+          {
+            "required": "1",
+            "_id": "64740ea521e9d82269eb01fc",
+            "name": "reply_task_id",
+            "desc": ""
+          }
+        ],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "64740ea521e9d8b990eb01fd",
+            "name": "Content-Type",
+            "value": "application/x-www-form-urlencoded"
+          }
+        ],
+        "req_body_form": [],
+        "__v": 0,
+        "desc": "",
+        "markdown": "",
+        "req_body_type": "form",
+        "res_body": "{\"type\":\"object\",\"title\":\"title\",\"properties\":{}}"
+      },
+      {
+        "query_path": {
+          "path": "/task",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "undone",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 2656,
+        "method": "POST",
+        "catid": 574,
+        "title": "新建主任務",
+        "path": "/task",
+        "project_id": 53,
+        "req_params": [],
+        "res_body_type": "json",
+        "uid": 65,
+        "add_time": 1685089960,
+        "up_time": 1685090115,
+        "req_query": [],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "64706f4321e9d83e15eb01a6",
+            "name": "Content-Type",
+            "value": "application/x-www-form-urlencoded"
+          }
+        ],
+        "req_body_form": [
+          {
+            "required": "1",
+            "_id": "64706f4321e9d88426eb01ad",
+            "name": "product_name",
+            "type": "text"
+          },
+          {
+            "required": "1",
+            "_id": "64706f4321e9d8a0a1eb01ac",
+            "name": "phase_name",
+            "type": "text",
+            "example": "",
+            "desc": ""
+          },
+          {
+            "required": "1",
+            "_id": "64706f4321e9d82084eb01ab",
+            "name": "task_type",
+            "type": "text",
+            "example": "",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "64706f4321e9d81ba2eb01aa",
+            "name": "task_name",
+            "type": "text",
+            "example": "",
+            "desc": ""
+          },
+          {
+            "required": "1",
+            "_id": "64706f4321e9d8c4c0eb01a9",
+            "name": "distribute_method",
+            "type": "text",
+            "example": "",
+            "desc": ""
+          },
+          {
+            "required": "1",
+            "_id": "64706f4321e9d8ac7ceb01a8",
+            "name": "reply_group",
+            "type": "text",
+            "example": "",
+            "desc": ""
+          },
+          {
+            "required": "1",
+            "_id": "64706f4321e9d86912eb01a7",
+            "name": "audit_by",
+            "type": "text",
+            "example": "",
+            "desc": ""
+          }
+        ],
+        "__v": 0,
+        "desc": "",
+        "markdown": "",
+        "req_body_type": "form",
+        "res_body": "{\"type\":\"object\",\"title\":\"title\",\"properties\":{}}"
+      },
+      {
+        "query_path": {
+          "path": "/task/page",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "undone",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 2650,
+        "method": "GET",
+        "catid": 574,
+        "title": "獲取主任務列表",
+        "path": "/task/page",
+        "project_id": 53,
+        "req_params": [],
+        "res_body_type": "json",
+        "uid": 65,
+        "add_time": 1685079714,
+        "up_time": 1685327173,
+        "req_query": [
+          {
+            "required": "0",
+            "_id": "64740d4521e9d8dacbeb01e5",
+            "name": "page_index",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "64740d4521e9d8191eeb01e4",
+            "name": "per_page",
+            "example": "",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "64740d4521e9d88afbeb01e3",
+            "name": "product_id",
+            "example": "",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "64740d4521e9d82754eb01e2",
+            "name": "phase_id",
+            "example": "",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "64740d4521e9d81b81eb01e1",
+            "name": "task_name",
+            "example": "",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "64740d4521e9d85baceb01e0",
+            "name": "task_type",
+            "example": "",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "64740d4521e9d83797eb01df",
+            "name": "task_status",
+            "example": "",
+            "desc": ""
+          }
+        ],
+        "req_headers": [],
+        "req_body_form": [],
+        "__v": 0,
+        "desc": "",
+        "markdown": "",
+        "res_body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"msg\":{\"type\":\"string\"},\"code\":{\"type\":\"number\"},\"result\":{\"type\":\"object\",\"properties\":{\"current_page\":{\"type\":\"number\"},\"page_count\":{\"type\":\"number\"},\"total_page\":{\"type\":\"number\"},\"total_count\":{\"type\":\"number\"},\"task_list\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"task_id\":{\"type\":\"number\"},\"task_name\":{\"type\":\"string\"},\"task_type\":{\"type\":\"string\"},\"product_name\":{\"type\":\"string\"},\"phase_name\":{\"type\":\"string\"},\"task_status\":{\"type\":\"string\"},\"distribute_method\":{\"type\":\"string\"},\"process\":{\"type\":\"number\"},\"start_time\":{\"type\":\"string\"},\"end_time\":{\"type\":\"string\"},\"create_by\":{\"type\":\"string\"},\"audit_by\":{\"type\":\"string\"}},\"required\":[\"task_id\",\"task_name\",\"task_type\",\"product_name\",\"phase_name\",\"task_status\",\"distribute_method\",\"process\",\"start_time\",\"end_time\",\"create_by\",\"audit_by\"]}}},\"required\":[\"current_page\",\"page_count\",\"total_page\",\"total_count\",\"task_list\"]}},\"required\":[\"msg\",\"code\",\"result\"]}"
+      },
+      {
+        "query_path": {
+          "path": "/task_reply/page",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "undone",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 2665,
+        "method": "GET",
+        "catid": 574,
+        "title": "獲取任務回復列表",
+        "path": "/task_reply/page",
+        "project_id": 53,
+        "req_params": [],
+        "res_body_type": "json",
+        "uid": 65,
+        "add_time": 1685090352,
+        "up_time": 1685327549,
+        "req_query": [
+          {
+            "required": "0",
+            "_id": "64740ebd21e9d826c4eb0204",
+            "name": "product_id",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "64740ebd21e9d885e2eb0203",
+            "name": "phase_id",
+            "example": "",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "64740ebd21e9d8bab6eb0202",
+            "name": "reply_task_name",
+            "example": "",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "64740ebd21e9d86cb6eb0201",
+            "name": "reply_task_type",
+            "example": "",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "64740ebd21e9d825b4eb0200",
+            "name": "reply_task_status",
+            "example": "",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "64740ebd21e9d8738aeb01ff",
+            "name": "page_index",
+            "example": "",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "64740ebd21e9d8bb84eb01fe",
+            "name": "per_page",
+            "example": "",
+            "desc": ""
+          }
+        ],
+        "req_headers": [],
+        "req_body_form": [],
+        "__v": 0,
+        "desc": "",
+        "markdown": "",
+        "res_body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"msg\":{\"type\":\"string\"},\"code\":{\"type\":\"number\"},\"result\":{\"type\":\"object\",\"properties\":{\"current_page\":{\"type\":\"number\"},\"page_count\":{\"type\":\"number\"},\"total_page\":{\"type\":\"number\"},\"total_count\":{\"type\":\"number\"},\"task_list\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"reply_task_id\":{\"type\":\"string\"},\"reply_task_name\":{\"type\":\"string\"},\"product_name\":{\"type\":\"string\"},\"phase_name\":{\"type\":\"string\"},\"reply_task_type\":{\"type\":\"string\"},\"distribution_method\":{\"type\":\"string\"},\"reply_group\":{\"type\":\"string\"},\"start_time\":{\"type\":\"string\"},\"end_time\":{\"type\":\"string\"},\"update_time\":{\"type\":\"string\"},\"update_by\":{\"type\":\"string\"},\"reply_task_status\":{\"type\":\"string\"}},\"required\":[\"reply_task_id\",\"product_name\",\"phase_name\",\"reply_task_type\",\"distribution_method\",\"reply_group\",\"start_time\",\"end_time\",\"update_time\",\"update_by\",\"reply_task_status\",\"reply_task_name\"]}}},\"required\":[\"current_page\",\"page_count\",\"total_page\",\"total_count\",\"task_list\"]}},\"required\":[\"msg\",\"code\",\"result\"]}"
+      }
+    ]
+  },
+  {
+    "index": 1,
+    "name": "partnumber",
+    "desc": null,
+    "add_time": 1681723470,
+    "up_time": 1681723470,
+    "list": [
+      {
+        "query_path": {
+          "path": "/partnumber",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [
+          "Andy"
+        ],
+        "_id": 2557,
+        "method": "DELETE",
+        "catid": 484,
+        "title": "删除partnumber",
+        "path": "/partnumber",
+        "project_id": 53,
+        "req_params": [],
+        "res_body_type": "json",
+        "req_query": [
+          {
+            "required": "1",
+            "_id": "645df0b521e9d8f3a6eaff70",
+            "name": "partnumber_id",
+            "desc": ""
+          }
+        ],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "645df0b521e9d87d9ceaff71",
+            "name": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "req_body_form": [],
+        "desc": "",
+        "markdown": "",
+        "req_body_type": "json",
+        "res_body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"msg\":{\"type\":\"string\"},\"code\":{\"type\":\"number\"},\"result\":{\"type\":\"object\",\"properties\":{}}}}",
+        "req_body_other": "{\"type\":\"object\",\"title\":\"title\",\"properties\":{}}",
+        "uid": 24,
+        "add_time": 1683618947,
+        "up_time": 1683878069,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/partnumber",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [
+          "Andy"
+        ],
+        "_id": 2476,
+        "method": "POST",
+        "catid": 484,
+        "title": "添加partnumber",
+        "path": "/partnumber",
+        "project_id": 53,
+        "req_params": [],
+        "res_body_type": "json",
+        "uid": 24,
+        "add_time": 1681780608,
+        "up_time": 1684723393,
+        "req_query": [],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "64672c1021e9d818b2eb0053",
+            "name": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "req_body_form": [
+          {
+            "required": "1",
+            "_id": "64672c1021e9d8e2bdeb005b",
+            "name": "asset_category_id",
+            "type": "text"
+          },
+          {
+            "required": "1",
+            "_id": "64672c1021e9d8231feb005a",
+            "name": "standard_name_id",
+            "type": "text",
+            "example": "",
+            "desc": ""
+          },
+          {
+            "required": "1",
+            "_id": "64672c1021e9d86092eb0059",
+            "name": "vendor_id",
+            "type": "text",
+            "example": "",
+            "desc": ""
+          },
+          {
+            "required": "1",
+            "_id": "64672c1021e9d80678eb0058",
+            "name": "station_id",
+            "type": "text",
+            "example": "",
+            "desc": ""
+          },
+          {
+            "required": "1",
+            "_id": "64672c1021e9d845d0eb0057",
+            "name": "spec_id",
+            "type": "text",
+            "example": "",
+            "desc": ""
+          },
+          {
+            "required": "1",
+            "_id": "64672c1021e9d88993eb0056",
+            "name": "spec",
+            "type": "text",
+            "example": "",
+            "desc": ""
+          },
+          {
+            "required": "1",
+            "_id": "64672c1021e9d8244aeb0055",
+            "name": "price",
+            "type": "text",
+            "example": "",
+            "desc": ""
+          },
+          {
+            "required": "1",
+            "_id": "64672c1021e9d8282feb0054",
+            "name": "currency",
+            "type": "text",
+            "example": "",
+            "desc": ""
+          }
+        ],
+        "__v": 0,
+        "desc": "",
+        "markdown": "",
+        "req_body_type": "json",
+        "res_body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"msg\":{\"type\":\"string\"},\"code\":{\"type\":\"number\"},\"result\":{\"type\":\"object\",\"properties\":{}}}}",
+        "req_body_other": "{\"type\":\"object\",\"title\":\"title\",\"properties\":{\"asset_category_id\":{\"type\":\"string\"},\"standard_name_id\":{\"type\":\"string\"},\"vendor_id\":{\"type\":\"string\"},\"station_id\":{\"type\":\"string\"},\"price\":{\"type\":\"number\"},\"currency\":{\"type\":\"string\"},\"spec_id\":{\"type\":\"string\"}},\"required\":[\"asset_category_id\",\"standard_name_id\",\"vendor_id\",\"station_id\",\"price\",\"currency\",\"spec_id\"]}"
+      },
+      {
+        "query_path": {
+          "path": "/partnumber",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 2566,
+        "method": "GET",
+        "catid": 484,
+        "title": "获取单个partnumber",
+        "path": "/partnumber",
+        "project_id": 53,
+        "req_params": [],
+        "res_body_type": "json",
+        "uid": 24,
+        "add_time": 1684203266,
+        "up_time": 1684723384,
+        "req_query": [
+          {
+            "required": "1",
+            "_id": "64672d3521e9d80817eb0060",
+            "name": "standard_name_id",
+            "example": "",
+            "desc": ""
+          },
+          {
+            "required": "1",
+            "_id": "64672d3521e9d86c9beb005f",
+            "name": "spec_id",
+            "example": "",
+            "desc": ""
+          },
+          {
+            "required": "1",
+            "_id": "64672d3521e9d874bbeb005e",
+            "name": "vendor_id",
+            "example": "",
+            "desc": ""
+          },
+          {
+            "required": "1",
+            "_id": "64672d3521e9d86510eb005d",
+            "name": "station_id",
+            "example": "",
+            "desc": ""
+          },
+          {
+            "required": "1",
+            "_id": "64672d3521e9d8b2c3eb005c",
+            "name": "asset_category_id",
+            "desc": ""
+          }
+        ],
+        "req_headers": [],
+        "req_body_form": [],
+        "__v": 0,
+        "desc": "",
+        "markdown": "",
+        "res_body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"number\"},\"msg\":{\"type\":\"string\"},\"result\":{\"type\":\"object\",\"properties\":{\"partnumber_id\":{\"type\":\"number\"},\"partnumber\":{\"type\":\"string\"},\"asset_category\":{\"type\":\"string\"},\"standard_name\":{\"type\":\"string\"},\"vendor\":{\"type\":\"string\"},\"station\":{\"type\":\"string\"},\"spec\":{\"type\":\"string\"},\"asset_category_id\":{\"type\":\"number\"},\"standard_name_id\":{\"type\":\"number\"},\"vendor_id\":{\"type\":\"number\"},\"station_id\":{\"type\":\"number\"},\"spec_id\":{\"type\":\"number\"},\"zh_name\":{\"type\":\"string\"},\"en_name\":{\"type\":\"string\"},\"aqid\":{\"type\":\"string\"},\"vpn\":{\"type\":\"string\"},\"payment_method\":{\"type\":\"string\"},\"price\":{\"type\":\"number\"},\"currency\":{\"type\":\"string\"},\"fx_partnumber\":{\"type\":\"string\"},\"is_virtual\":{\"type\":\"string\"},\"physical_spec\":{\"type\":\"string\"}}}}}"
+      },
+      {
+        "query_path": {
+          "path": "/partnumber",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 1,
+        "tag": [
+          "Andy"
+        ],
+        "_id": 2479,
+        "method": "PUT",
+        "catid": 484,
+        "title": "编辑partnumber",
+        "path": "/partnumber",
+        "project_id": 53,
+        "req_params": [],
+        "res_body_type": "json",
+        "uid": 24,
+        "add_time": 1681780785,
+        "up_time": 1683878080,
+        "req_query": [],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "645df0c021e9d8e2eceaff72",
+            "name": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "req_body_form": [
+          {
+            "required": "1",
+            "_id": "645df0c021e9d87f4ceaff76",
+            "name": "partnumber_id",
+            "type": "text"
+          },
+          {
+            "required": "0",
+            "_id": "645df0c021e9d875d3eaff75",
+            "name": "spec",
+            "type": "text",
+            "example": "",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "645df0c021e9d83b5beaff74",
+            "name": "price",
+            "type": "text",
+            "example": "",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "645df0c021e9d805cceaff73",
+            "name": "currency",
+            "type": "text",
+            "example": "",
+            "desc": ""
+          }
+        ],
+        "__v": 0,
+        "desc": "",
+        "markdown": "",
+        "req_body_type": "json",
+        "res_body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"msg\":{\"type\":\"string\"},\"code\":{\"type\":\"number\"},\"result\":{\"type\":\"object\",\"properties\":{}}}}",
+        "req_body_other": "{\"type\":\"object\",\"title\":\"title\",\"properties\":{\"partnumber_id\":{\"type\":\"number\"},\"price\":{\"type\":\"string\"},\"currency\":{\"type\":\"string\"}},\"required\":[\"partnumber_id\",\"price\",\"currency\"]}"
+      },
+      {
+        "query_path": {
+          "path": "/partnumber/binding",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 2,
+        "tag": [
+          "Andy"
+        ],
+        "_id": 2482,
+        "method": "PUT",
+        "catid": 484,
+        "title": "绑定partnumber",
+        "path": "/partnumber/binding",
+        "project_id": 53,
+        "req_params": [],
+        "res_body_type": "json",
+        "uid": 24,
+        "add_time": 1681781200,
+        "up_time": 1684723387,
+        "req_query": [],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "645df0c721e9d89706eaff77",
+            "name": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "req_body_form": [],
+        "__v": 0,
+        "desc": "",
+        "markdown": "",
+        "req_body_type": "json",
+        "res_body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"msg\":{\"type\":\"string\"},\"code\":{\"type\":\"number\"},\"result\":{\"type\":\"object\",\"properties\":{}}}}",
+        "req_body_other": "{\"type\":\"object\",\"title\":\"title\",\"properties\":{\"partnumber_id\":{\"type\":\"number\"},\"real_partnumber_id\":{\"type\":\"number\"}},\"required\":[\"partnumber_id\",\"real_partnumber_id\"]}"
+      },
+      {
+        "query_path": {
+          "path": "/partnumber/page",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 3,
+        "tag": [
+          "Andy"
+        ],
+        "_id": 2473,
+        "method": "GET",
+        "catid": 484,
+        "title": "获取partnumber列表",
+        "path": "/partnumber/page",
+        "project_id": 53,
+        "req_params": [],
+        "res_body_type": "json",
+        "uid": 24,
+        "add_time": 1681723527,
+        "up_time": 1685065846,
+        "req_query": [
+          {
+            "required": "0",
+            "_id": "6470107621e9d89e3feb0154",
+            "name": "asset_category_id",
+            "example": "1",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "6470107621e9d8e756eb0153",
+            "name": "standard_name_id",
+            "example": "2",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "6470107621e9d842ceeb0152",
+            "name": "spec_id",
+            "example": "3",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "6470107621e9d8186eeb0151",
+            "name": "vendor_id",
+            "example": "4",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "6470107621e9d875a4eb0150",
+            "name": "station_id",
+            "example": "5",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "6470107621e9d851feeb014f",
+            "name": "is_virtual",
+            "example": "",
+            "desc": ""
+          },
+          {
+            "required": "1",
+            "_id": "6470107621e9d86e4ceb014e",
+            "name": "page_index",
+            "example": "1",
+            "desc": ""
+          },
+          {
+            "required": "1",
+            "_id": "6470107621e9d83b64eb014d",
+            "name": "per_page",
+            "example": "20",
+            "desc": ""
+          }
+        ],
+        "req_headers": [],
+        "req_body_form": [],
+        "__v": 0,
+        "desc": "<p>按partnumber排序从小到大</p>\n",
+        "markdown": "按partnumber排序从小到大",
+        "res_body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"number\"},\"msg\":{\"type\":\"string\"},\"result\":{\"type\":\"object\",\"properties\":{\"current_page\":{\"type\":\"number\"},\"page_count\":{\"type\":\"number\"},\"total_page\":{\"type\":\"number\"},\"total_count\":{\"type\":\"number\"},\"partnumber_list\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"partnumber_id\":{\"type\":\"number\"},\"partnumber\":{\"type\":\"string\"},\"asset_category\":{\"type\":\"string\"},\"standard_name\":{\"type\":\"string\"},\"vendor\":{\"type\":\"string\"},\"station\":{\"type\":\"string\"},\"spec\":{\"type\":\"string\"},\"asset_category_id\":{\"type\":\"number\"},\"standard_name_id\":{\"type\":\"number\"},\"vendor_id\":{\"type\":\"number\"},\"station_id\":{\"type\":\"number\"},\"spec_id\":{\"type\":\"number\"},\"zh_name\":{\"type\":\"string\"},\"en_name\":{\"type\":\"string\"},\"aqid\":{\"type\":\"string\"},\"vpn\":{\"type\":\"string\"},\"payment_method\":{\"type\":\"string\"},\"price\":{\"type\":\"number\"},\"currency\":{\"type\":\"string\"},\"fx_partnumber\":{\"type\":\"string\"},\"is_virtual\":{\"type\":\"string\"},\"physical_spec\":{\"type\":\"string\"}},\"required\":[\"partnumber_id\",\"partnumber\",\"asset_category\",\"standard_name\",\"vendor\",\"station\",\"spec\",\"asset_category_id\",\"standard_name_id\",\"vendor_id\",\"station_id\",\"spec_id\",\"zh_name\",\"en_name\",\"aqid\",\"vpn\",\"payment_method\",\"price\",\"currency\",\"fx_partnumber\",\"is_virtual\",\"physical_spec\"]}}}}}}"
+      }
+    ]
+  },
+  {
+    "index": 2,
+    "name": "partnumber item",
+    "desc": null,
+    "add_time": 1681872439,
+    "up_time": 1681872439,
+    "list": [
+      {
+        "query_path": {
+          "path": "/partnumber_item",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [
+          "Andy"
+        ],
+        "_id": 2494,
+        "method": "DELETE",
+        "catid": 493,
+        "title": "删除 partnumber item",
+        "path": "/partnumber_item",
+        "project_id": 53,
+        "req_params": [],
+        "res_body_type": "json",
+        "uid": 24,
+        "add_time": 1681872504,
+        "up_time": 1684227688,
+        "req_query": [
+          {
+            "required": "1",
+            "_id": "645df30321e9d83b7beaff7f",
+            "name": "partnumber_item_id",
+            "desc": ""
+          }
+        ],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "645df30321e9d84814eaff80",
+            "name": "Content-Type",
+            "value": "application/x-www-form-urlencoded"
+          }
+        ],
+        "req_body_form": [],
+        "__v": 0,
+        "desc": "",
+        "markdown": "",
+        "req_body_type": "form",
+        "res_body": "{\"type\":\"object\",\"title\":\"title\",\"properties\":{}}"
+      },
+      {
+        "query_path": {
+          "path": "/partnumber_item",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [
+          "Andy"
+        ],
+        "_id": 2491,
+        "method": "PUT",
+        "catid": 493,
+        "title": "编辑partnumber item",
+        "path": "/partnumber_item",
+        "project_id": 53,
+        "req_params": [],
+        "res_body_type": "json",
+        "uid": 24,
+        "add_time": 1681872278,
+        "up_time": 1684227687,
+        "req_query": [],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "645df2fb21e9d8be57eaff7c",
+            "name": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "req_body_form": [
+          {
+            "required": "1",
+            "_id": "645df2fb21e9d8a4dfeaff7e",
+            "name": "partnumber_item_id",
+            "type": "text"
+          },
+          {
+            "required": "1",
+            "_id": "645df2fb21e9d8ed80eaff7d",
+            "name": "item_name",
+            "type": "text",
+            "example": "",
+            "desc": ""
+          }
+        ],
+        "__v": 0,
+        "desc": "",
+        "markdown": "",
+        "req_body_type": "json",
+        "res_body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"msg\":{\"type\":\"string\"},\"code\":{\"type\":\"number\"},\"result\":{\"type\":\"object\",\"properties\":{}}}}",
+        "req_body_other": "{\"type\":\"object\",\"title\":\"title\",\"properties\":{\"partnumber_item_id\":{\"type\":\"number\"},\"item_name\":{\"type\":\"string\"}},\"required\":[\"partnumber_item_id\",\"item_name\"]}"
+      },
+      {
+        "query_path": {
+          "path": "/partnumber_item",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 4,
+        "tag": [
+          "Andy"
+        ],
+        "_id": 2488,
+        "method": "POST",
+        "catid": 493,
+        "title": "添加partnumber item",
+        "path": "/partnumber_item",
+        "project_id": 53,
+        "req_params": [],
+        "res_body_type": "json",
+        "uid": 11,
+        "add_time": 1681867919,
+        "up_time": 1684227689,
+        "req_query": [],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "645e0f0d21e9d80aa8eaff8b",
+            "name": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "req_body_form": [
+          {
+            "required": "1",
+            "_id": "645e0f0d21e9d88baceaff8f",
+            "name": "item_name",
+            "type": "text"
+          },
+          {
+            "required": "1",
+            "_id": "645e0f0d21e9d8e175eaff8e",
+            "name": "item_type",
+            "type": "text",
+            "example": "",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "645e0f0d21e9d82026eaff8d",
+            "name": "parent_id",
+            "type": "text",
+            "example": "",
+            "desc": ""
+          },
+          {
+            "required": "1",
+            "_id": "645e0f0d21e9d8d7c2eaff8c",
+            "name": "is_virtual",
+            "type": "text",
+            "example": "",
+            "desc": ""
+          }
+        ],
+        "__v": 0,
+        "desc": "<p>item_type:&nbsp;資產類別 asset_category<br>\n標準品名 standard_name<br>\n規格&nbsp;&nbsp;&nbsp; spec<br>\n廠商&nbsp;&nbsp;&nbsp; vendor<br>\n工站&nbsp;&nbsp;&nbsp; station<br>\n(type为英文字段)</p>\n",
+        "markdown": "item\\_type: 資產類別 asset\\_category\n標準品名 standard_name\n規格    spec\n廠商    vendor\n工站    station\n(type为英文字段)",
+        "req_body_type": "json",
+        "res_body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"msg\":{\"type\":\"string\"},\"code\":{\"type\":\"number\"},\"result\":{\"type\":\"object\",\"properties\":{\"data\":{\"type\":\"object\",\"properties\":{\"partnumber_item\":{\"type\":\"object\",\"properties\":{\"item_id\":{\"type\":\"string\"}},\"required\":[\"item_id\"]}},\"required\":[\"partnumber_item\"]}}}}}",
+        "req_body_other": "{\"type\":\"object\",\"title\":\"title\",\"properties\":{\"item_name\":{\"type\":\"string\"},\"item_type\":{\"type\":\"string\"},\"parent_id\":{\"type\":\"number\"},\"is_virtual\":{\"type\":\"string\"}},\"required\":[\"item_name\",\"item_type\",\"is_virtual\",\"parent_id\"]}"
+      },
+      {
+        "query_path": {
+          "path": "/partnumber_item/list",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 5,
+        "tag": [
+          "Andy"
+        ],
+        "_id": 2485,
+        "method": "GET",
+        "catid": 493,
+        "title": "获取partnumber item列表",
+        "path": "/partnumber_item/list",
+        "project_id": 53,
+        "req_params": [],
+        "res_body_type": "json",
+        "uid": 24,
+        "add_time": 1681781374,
+        "up_time": 1684227690,
+        "req_query": [
+          {
+            "required": "0",
+            "_id": "645df31221e9d81d1eeaff87",
+            "name": "item_type",
+            "example": "asset_category;standard_name",
+            "desc": "不传获取全部"
+          },
+          {
+            "required": "0",
+            "_id": "645df31221e9d8035beaff86",
+            "name": "is_virtual",
+            "example": "",
+            "desc": ""
+          }
+        ],
+        "req_headers": [],
+        "req_body_form": [],
+        "__v": 0,
+        "desc": "<p>按code从小到大排序</p>\n",
+        "markdown": "按code从小到大排序",
+        "res_body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"msg\":{\"type\":\"string\"},\"code\":{\"type\":\"number\"},\"result\":{\"type\":\"object\",\"properties\":{\"data\":{\"type\":\"object\",\"properties\":{\"partnumber_item_list\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"item_name\":{\"type\":\"string\"},\"item_type\":{\"type\":\"string\"},\"item_code\":{\"type\":\"string\"},\"parent_id\":{\"type\":\"string\"},\"is_virtual\":{\"type\":\"string\"},\"updated_by\":{\"type\":\"string\"},\"updated_time\":{\"type\":\"string\",\"description\":\"2023-04-19 12:00:00\"},\"item_id\":{\"type\":\"number\"}},\"required\":[\"item_name\",\"item_type\",\"item_code\",\"parent_id\",\"is_virtual\",\"updated_by\",\"updated_time\",\"item_id\"]}}},\"required\":[\"partnumber_item_list\"]}}}}}"
+      }
+    ]
+  },
+  {
+    "index": 3,
+    "name": "asset",
+    "desc": null,
+    "add_time": 1681873308,
+    "up_time": 1681883701,
+    "list": [
+      {
+        "query_path": {
+          "path": "/asset/consumable/file",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "undone",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 2506,
+        "method": "POST",
+        "catid": 502,
+        "title": "上传资产耗材文件",
+        "path": "/asset/consumable/file",
+        "project_id": 53,
+        "req_params": [],
+        "res_body_type": "json",
+        "uid": 24,
+        "add_time": 1681887087,
+        "up_time": 1684381007,
+        "req_query": [],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "64659d4f21e9d8fc17eb0046",
+            "name": "Content-Type",
+            "value": "multipart/form-data"
+          }
+        ],
+        "req_body_form": [
+          {
+            "required": "1",
+            "_id": "64659d4f21e9d8b39deb0047",
+            "name": "file",
+            "type": "file"
+          }
+        ],
+        "__v": 0,
+        "desc": "<p>data_list:[<br>\n&nbsp; &nbsp; &nbsp; &nbsp; {<br>\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 'row':1<br>\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'value':[‘<span class=\"colour\" style=\"color:rgb(156, 220, 254)\">asset_category有误</span>’,‘<span class=\"colour\" style=\"color:rgb(156, 220, 254)\">vendor厂商未找到</span>’],<br>\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;},<br>\n&nbsp; &nbsp; {<br>\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 'row':2<br>\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'value':[‘<span class=\"colour\" style=\"color:rgb(156, 220, 254)\">asset_category有误</span>’,‘~~~~<span class=\"colour\" style=\"color:rgb(156, 220, 254)\">vendor厂商未找到</span>’],<br>\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;}</p>\n<p>]</p>\n",
+        "markdown": "data_list:[\n        {\n              'row':1\n            'value':[‘<span class=\"colour\" style=\"color:rgb(156, 220, 254)\">asset_category有误</span>’,‘<span class=\"colour\" style=\"color:rgb(156, 220, 254)\">vendor厂商未找到</span>’],\n         },\n    {\n              'row':2\n            'value':[‘<span class=\"colour\" style=\"color:rgb(156, 220, 254)\">asset_category有误</span>’,‘~~~~<span class=\"colour\" style=\"color:rgb(156, 220, 254)\">vendor厂商未找到</span>’],\n         }\n\n]",
+        "res_body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"number\"},\"msg\":{\"type\":\"string\"},\"result\":{\"type\":\"object\",\"properties\":{\"error_list\":{\"type\":\"array\",\"items\":{\"type\":\"string\"}},\"data_list\":{\"type\":\"array\",\"items\":{\"type\":\"string\"}},\"verify_result\":{\"type\":\"boolean\"}}}}}",
+        "req_body_type": "form"
+      },
+      {
+        "query_path": {
+          "path": "/asset/equipment/file",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "undone",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 2503,
+        "method": "POST",
+        "catid": 502,
+        "title": "上传资产设备文件",
+        "path": "/asset/equipment/file",
+        "project_id": 53,
+        "req_params": [],
+        "res_body_type": "json",
+        "uid": 24,
+        "add_time": 1681886148,
+        "up_time": 1684722378,
+        "req_query": [],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "646ad2ca21e9d8004aeb0083",
+            "name": "Content-Type",
+            "value": "multipart/form-data"
+          }
+        ],
+        "req_body_form": [
+          {
+            "required": "1",
+            "_id": "646ad2ca21e9d8c168eb0084",
+            "name": "file",
+            "type": "file"
+          }
+        ],
+        "__v": 0,
+        "desc": "<p>错误行信息:data_list:[<br>\n&nbsp; &nbsp; &nbsp; &nbsp; {<br>\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 'row':1<br>\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'value':[‘<span class=\"colour\" style=\"color:rgb(156, 220, 254)\">asset_category有误</span>’,‘<span class=\"colour\" style=\"color:rgb(156, 220, 254)\">vendor厂商未找到</span>’],<br>\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;},<br>\n&nbsp; &nbsp; {<br>\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 'row':2<br>\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'value':[‘<span class=\"colour\" style=\"color:rgb(156, 220, 254)\">asset_category有误</span>’,‘~~~~<span class=\"colour\" style=\"color:rgb(156, 220, 254)\">vendor厂商未找到</span>’],<br>\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;}</p>\n<p>]~~~~</p>\n<h5>任务返回</h5>\n<pre><code data-language=\"python\" class=\"lang-python\">{\n    \"code\": 200,\n    \"msg\": \"success\",\n    \"result\": {\n        \"task_id\": \"dc65a42b-2d99-48bb-a355-9b498b2d2823\"\n    }\n}\n</code></pre>\n<p><br data-tomark-pass=\"\"><br>\n<br data-tomark-pass=\"\"></p>\n",
+        "markdown": "错误行信息:data_list:[\n        {\n              'row':1\n            'value':[‘<span class=\"colour\" style=\"color:rgb(156, 220, 254)\">asset_category有误</span>’,‘<span class=\"colour\" style=\"color:rgb(156, 220, 254)\">vendor厂商未找到</span>’],\n         },\n    {\n              'row':2\n            'value':[‘<span class=\"colour\" style=\"color:rgb(156, 220, 254)\">asset_category有误</span>’,‘~~~~<span class=\"colour\" style=\"color:rgb(156, 220, 254)\">vendor厂商未找到</span>’],\n         }\n\n]~~~~\n\n##### 任务返回\n\n``` python\n{\n    \"code\": 200,\n    \"msg\": \"success\",\n    \"result\": {\n        \"task_id\": \"dc65a42b-2d99-48bb-a355-9b498b2d2823\"\n    }\n}\n```\n\n<br>\n<br>\n",
+        "req_body_type": "form",
+        "res_body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"number\"},\"msg\":{\"type\":\"string\"},\"result\":{\"type\":\"object\",\"properties\":{\"error_list\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"fail_row\":{\"type\":\"number\"},\"fail_msgs\":{\"type\":\"array\",\"items\":{\"type\":\"string\"}}},\"required\":[\"fail_row\",\"fail_msgs\"]}},\"data_list\":{\"type\":\"array\",\"items\":{\"type\":\"string\"}},\"verify_result\":{\"type\":\"boolean\"}}}}}"
+      },
+      {
+        "query_path": {
+          "path": "/task/status/{task_id}",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "var",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 2572,
+        "method": "GET",
+        "catid": 502,
+        "title": "获取任务进度",
+        "path": "/task/status/{task_id}",
+        "project_id": 53,
+        "req_params": [
+          {
+            "_id": "646b0d5e21e9d824e8eb00a0",
+            "name": "task_id",
+            "desc": ""
+          }
+        ],
+        "res_body_type": "json",
+        "uid": 24,
+        "add_time": 1684394259,
+        "up_time": 1684737374,
+        "req_query": [],
+        "req_headers": [],
+        "req_body_form": [],
+        "__v": 0,
+        "desc": "<p>任务状态：</p>\n<pre><code>\nPENDING = \"PENDING\"  # Task is waiting for execution or unknown\nPROGRESS = \"PROGRESS\"  # Task is progressing\nSUCCESS = \"SUCCESS\"  # Task has been successfully executed\nFAILURE = \"FAILURE\"  # Task execution resulted in failure\nERROR = \"ERROR\"  # Task execution resulted in error\nRETRY = \"RETRY\"  # Task is being retried\n</code></pre>\n",
+        "markdown": "任务状态：\n\n```\n\nPENDING = \"PENDING\"  # Task is waiting for execution or unknown\nPROGRESS = \"PROGRESS\"  # Task is progressing\nSUCCESS = \"SUCCESS\"  # Task has been successfully executed\nFAILURE = \"FAILURE\"  # Task execution resulted in failure\nERROR = \"ERROR\"  # Task execution resulted in error\nRETRY = \"RETRY\"  # Task is being retried\n```",
+        "res_body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"number\"},\"msg\":{\"type\":\"string\"},\"result\":{\"type\":\"object\",\"properties\":{\"state\":{\"type\":\"string\"},\"current\":{\"type\":\"number\",\"description\":\"0-100\"},\"total\":{\"type\":\"number\",\"description\":\"0-100\"}}}}}"
+      },
+      {
+        "query_path": {
+          "path": "/asset/consumable/page",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [
+          "Andy"
+        ],
+        "_id": 2500,
+        "method": "GET",
+        "catid": 502,
+        "title": "获取资产耗材分頁列表",
+        "path": "/asset/consumable/page",
+        "project_id": 53,
+        "req_params": [],
+        "res_body_type": "json",
+        "uid": 24,
+        "add_time": 1681883692,
+        "up_time": 1684227707,
+        "req_query": [
+          {
+            "required": "0",
+            "_id": "6461a65f21e9d87e4feaffe7",
+            "name": "asset_category_id",
+            "example": "",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "6461a65f21e9d860b6eaffe6",
+            "name": "standard_name_id",
+            "example": "",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "6461a65f21e9d84114eaffe5",
+            "name": "vendor_id",
+            "example": "",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "6461a65f21e9d81a75eaffe4",
+            "name": "station_id",
+            "example": "",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "6461a65f21e9d8909beaffe3",
+            "name": "spec_id",
+            "example": "",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "6461a65f21e9d8cdb2eaffe2",
+            "name": "product",
+            "example": "",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "6461a65f21e9d87ae8eaffe1",
+            "name": "page_index",
+            "example": "",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "6461a65f21e9d803c9eaffe0",
+            "name": "per_page",
+            "example": "",
+            "desc": ""
+          }
+        ],
+        "req_headers": [],
+        "req_body_form": [],
+        "__v": 0,
+        "desc": "<p>先按partnumber从小到大</p>\n",
+        "markdown": "先按partnumber从小到大",
+        "res_body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"msg\":{\"type\":\"string\"},\"code\":{\"type\":\"number\"},\"result\":{\"type\":\"object\",\"properties\":{\"data\":{\"type\":\"object\",\"properties\":{\"asset_consumable_list\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"partnumber\":{\"type\":\"object\",\"properties\":{}},\"department\":{\"type\":\"string\",\"description\":\"使用部門\"},\"product\":{\"type\":\"string\",\"description\":\"專案名稱\"},\"location\":{\"type\":\"string\",\"description\":\"存放位置\"},\"total_qty\":{\"type\":\"number\",\"description\":\"總數\"},\"non_defective_qty\":{\"type\":\"number\",\"description\":\"良品數量\"},\"defective_qty\":{\"type\":\"number\",\"description\":\"不良品數量\"},\"remark\":{\"type\":\"string\"},\"updated_by\":{\"type\":\"string\"},\"updated_time\":{\"type\":\"string\"},\"borrow_status\":{\"type\":\"boolean\",\"description\":\"是否借用\"},\"borrowing_channels\":{\"type\":\"string\",\"description\":\"借用途径\"},\"id\":{\"type\":\"string\"}},\"required\":[\"partnumber\",\"department\",\"product\",\"location\",\"total_qty\",\"non_defective_qty\",\"defective_qty\",\"remark\",\"updated_by\",\"updated_time\",\"borrow_status\",\"borrowing_channels\",\"id\"]}}},\"required\":[\"asset_consumable_list\"]}}}}}"
+      },
+      {
+        "query_path": {
+          "path": "/asset/equipment/page",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [
+          "Andy"
+        ],
+        "_id": 2497,
+        "method": "GET",
+        "catid": 502,
+        "title": "获取资产设备分頁列表",
+        "path": "/asset/equipment/page",
+        "project_id": 53,
+        "req_params": [],
+        "res_body_type": "json",
+        "uid": 24,
+        "add_time": 1681873362,
+        "up_time": 1684483556,
+        "req_query": [
+          {
+            "required": "0",
+            "_id": "64672de421e9d85e4aeb0071",
+            "name": "asset_category_id",
+            "example": "",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "64672de421e9d814a5eb0070",
+            "name": "standard_name_id",
+            "example": "",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "64672de421e9d88ee0eb006f",
+            "name": "vendor_id",
+            "example": "",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "64672de421e9d836cbeb006e",
+            "name": "station_id",
+            "example": "",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "64672de421e9d8b6c5eb006d",
+            "name": "spec_id",
+            "example": "",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "64672de421e9d82937eb006c",
+            "name": "product",
+            "example": "",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "64672de421e9d8cb3eeb006b",
+            "name": "asset_sn",
+            "example": "",
+            "desc": "模糊查找"
+          },
+          {
+            "required": "0",
+            "_id": "64672de421e9d8fbe6eb006a",
+            "name": "page_index",
+            "example": "",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "64672de421e9d8b0fceb0069",
+            "name": "per_page",
+            "example": "",
+            "desc": ""
+          }
+        ],
+        "req_headers": [],
+        "req_body_form": [],
+        "__v": 0,
+        "desc": "<p>先按partnumber从小到大&nbsp; &nbsp; 后按asset_sn顺排序~~~~</p>\n",
+        "markdown": "先按partnumber从小到大    后按asset_sn顺排序~~~~",
+        "res_body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"msg\":{\"type\":\"string\"},\"code\":{\"type\":\"number\"},\"result\":{\"type\":\"object\",\"properties\":{\"current_page\":{\"type\":\"number\"},\"page_count\":{\"type\":\"number\"},\"total_page\":{\"type\":\"number\"},\"total_count\":{\"type\":\"number\"},\"data\":{\"type\":\"object\",\"properties\":{\"asset_equipment_list\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"partnumber\":{\"type\":\"object\",\"properties\":{}},\"total_qty\":{\"type\":\"number\"},\"department\":{\"type\":\"string\"},\"product\":{\"type\":\"string\"},\"build\":{\"type\":\"string\"},\"location\":{\"type\":\"string\"},\"usage_status\":{\"type\":\"string\"},\"asset_sn\":{\"type\":\"string\"},\"control_number\":{\"type\":\"string\"},\"property_number\":{\"type\":\"string\"},\"customs_number\":{\"type\":\"string\"},\"customs_filing_number\":{\"type\":\"string\"},\"rfid\":{\"type\":\"string\"},\"purchase_order\":{\"type\":\"string\"},\"remark\":{\"type\":\"string\"},\"updated_by\":{\"type\":\"string\"},\"updated_time\":{\"type\":\"string\"},\"borrow_status\":{\"type\":\"boolean\",\"description\":\"是否借用\"},\"borrowing_channels\":{\"type\":\"string\",\"description\":\"借用途径\"},\"id\":{\"type\":\"string\"}},\"required\":[\"total_qty\",\"department\",\"product\",\"build\",\"location\",\"usage_status\",\"asset_sn\",\"control_number\",\"property_number\",\"customs_number\",\"customs_filing_number\",\"rfid\",\"purchase_order\",\"remark\",\"updated_by\",\"updated_time\",\"borrow_status\",\"borrowing_channels\",\"partnumber\",\"id\"]}}},\"required\":[\"asset_equipment_list\"]}}}}}"
+      }
+    ]
+  },
+  {
+    "index": 4,
+    "name": "公用選單接口",
+    "desc": null,
+    "add_time": 1681977413,
+    "up_time": 1681977413,
+    "list": [
+      {
+        "query_path": {
+          "path": "/public_menu/list",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 2521,
+        "method": "GET",
+        "catid": 520,
+        "title": "獲取公用選單列表",
+        "path": "/public_menu/list",
+        "project_id": 53,
+        "req_params": [],
+        "res_body_type": "json",
+        "uid": 65,
+        "add_time": 1683097245,
+        "up_time": 1684301818,
+        "req_query": [
+          {
+            "required": "0",
+            "_id": "646467fa21e9d82c84eb0040",
+            "name": "menu_name",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "646467fa21e9d816b2eb003f",
+            "name": "depth",
+            "example": "3",
+            "desc": "default 3,获取到子的深度"
+          }
+        ],
+        "req_headers": [],
+        "req_body_form": [],
+        "__v": 0,
+        "desc": "",
+        "markdown": "",
+        "res_body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"number\"},\"msg\":{\"type\":\"string\"},\"result\":{\"type\":\"object\",\"properties\":{\"current_page\":{\"type\":\"null\"},\"page_count\":{\"type\":\"null\"},\"total_page\":{\"type\":\"null\"},\"total_count\":{\"type\":\"null\"},\"type_list\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"menu_id\":{\"type\":\"number\"},\"parent_id\":{\"type\":\"null\"},\"parent_menu_name\":{\"type\":\"string\"},\"menu_config\":{\"type\":\"object\",\"properties\":{}},\"menu_name\":{\"type\":\"string\"},\"is_updatable\":{\"type\":\"boolean\"},\"children\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"menu_id\":{\"type\":\"number\"},\"parent_id\":{\"type\":\"number\"},\"parent_menu_name\":{\"type\":\"string\"},\"menu_config\":{\"type\":\"object\",\"properties\":{}},\"menu_name\":{\"type\":\"string\"},\"is_updatable\":{\"type\":\"boolean\"},\"children\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{}}}},\"required\":[\"menu_id\",\"parent_id\",\"menu_config\",\"menu_name\",\"is_updatable\",\"children\",\"parent_menu_name\"]}}},\"required\":[\"menu_id\",\"parent_id\",\"menu_config\",\"menu_name\",\"is_updatable\",\"children\",\"parent_menu_name\"]}}}}}}"
+      },
+      {
+        "query_path": {
+          "path": "/public_menu",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 1,
+        "tag": [],
+        "_id": 2527,
+        "method": "PUT",
+        "catid": 520,
+        "title": "修改公用選單",
+        "path": "/public_menu",
+        "project_id": 53,
+        "req_params": [],
+        "res_body_type": "json",
+        "uid": 65,
+        "add_time": 1683098188,
+        "up_time": 1683784466,
+        "req_query": [
+          {
+            "required": "1",
+            "_id": "645c831221e9d89f96eafef0",
+            "name": "menu_id",
+            "desc": "number"
+          }
+        ],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "645c831221e9d828bfeafef1",
+            "name": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "req_body_form": [],
+        "__v": 0,
+        "desc": "",
+        "markdown": "",
+        "req_body_type": "json",
+        "res_body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"number\"},\"msg\":{\"type\":\"string\"},\"result\":{\"type\":\"object\",\"properties\":{\"data\":{\"type\":\"object\",\"properties\":{\"menu_id\":{\"type\":\"number\"},\"parent_id\":{\"type\":\"number\"},\"menu_config\":{\"type\":\"object\",\"properties\":{}},\"menu_name\":{\"type\":\"string\"},\"is_updatable\":{\"type\":\"boolean\"}}}}}}}",
+        "req_body_other": "{\"type\":\"object\",\"title\":\"title\",\"properties\":{\"parent_id\":{\"type\":\"number\"},\"menu_name\":{\"type\":\"string\"},\"menu_config\":{\"type\":\"string\"},\"is_updatable\":{\"type\":\"boolean\"}}}"
+      },
+      {
+        "query_path": {
+          "path": "/public_menu",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 2,
+        "tag": [],
+        "_id": 2524,
+        "method": "POST",
+        "catid": 520,
+        "title": "添加公用選單",
+        "path": "/public_menu",
+        "project_id": 53,
+        "req_params": [],
+        "res_body_type": "json",
+        "uid": 65,
+        "add_time": 1683097946,
+        "up_time": 1683784056,
+        "req_query": [],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "645c817821e9d8330ceafeda",
+            "name": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "req_body_form": [],
+        "__v": 0,
+        "desc": "",
+        "markdown": "",
+        "req_body_type": "json",
+        "res_body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"number\"},\"msg\":{\"type\":\"string\"},\"result\":{\"type\":\"object\",\"properties\":{\"data\":{\"type\":\"object\",\"properties\":{\"menu_id\":{\"type\":\"number\"},\"parent_id\":{\"type\":\"number\"},\"menu_config\":{\"type\":\"null\"},\"menu_name\":{\"type\":\"string\"},\"is_updatable\":{\"type\":\"boolean\"}},\"required\":[\"menu_id\",\"parent_id\",\"menu_config\",\"menu_name\",\"is_updatable\"]}},\"required\":[\"data\"]}},\"required\":[\"code\",\"msg\",\"result\"]}",
+        "req_body_other": "{\"type\":\"object\",\"title\":\"title\",\"properties\":{\"parent_id\":{\"type\":\"number\"},\"menu_name\":{\"type\":\"string\"},\"is_updatable\":{\"type\":\"string\"},\"menu_config\":{\"type\":\"string\"}},\"required\":[\"menu_name\"]}"
+      },
+      {
+        "query_path": {
+          "path": "/public_menu",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 3,
+        "tag": [],
+        "_id": 2530,
+        "method": "DELETE",
+        "catid": 520,
+        "title": "刪除公用選單",
+        "path": "/public_menu",
+        "project_id": 53,
+        "req_params": [],
+        "res_body_type": "json",
+        "uid": 65,
+        "add_time": 1683098339,
+        "up_time": 1684723389,
+        "req_query": [
+          {
+            "required": "1",
+            "_id": "64619cc821e9d885e4eaffcc",
+            "name": "menu_id",
+            "desc": "number"
+          }
+        ],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "64619cc821e9d83133eaffcd",
+            "name": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "req_body_form": [],
+        "__v": 0,
+        "desc": "",
+        "markdown": "",
+        "req_body_type": "json",
+        "res_body": "{\"type\":\"object\",\"title\":\"title\",\"properties\":{\"msg\":{\"type\":\"string\"},\"code\":{\"type\":\"number\"},\"result\":{\"type\":\"object\",\"properties\":{\"data\":{\"type\":\"object\",\"properties\":{}}},\"required\":[\"data\"]}},\"required\":[\"msg\",\"code\",\"result\"]}",
+        "req_body_other": "{\"type\":\"object\",\"title\":\"title\",\"properties\":{\"parent_id\":{\"type\":\"number\"}},\"required\":[\"parent_id\"]}"
+      }
+    ]
+  },
+  {
+    "index": 5,
+    "name": "产品阶段",
+    "desc": null,
+    "add_time": 1683082751,
+    "up_time": 1683082751,
+    "list": [
+      {
+        "query_path": {
+          "path": "/product/list",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [
+          "Andy"
+        ],
+        "_id": 2563,
+        "method": "GET",
+        "catid": 529,
+        "title": "获取全部产品阶段",
+        "path": "/product/list",
+        "project_id": 53,
+        "req_params": [],
+        "res_body_type": "json",
+        "req_query": [],
+        "req_headers": [],
+        "req_body_form": [],
+        "desc": "",
+        "markdown": "",
+        "res_body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"msg\":{\"type\":\"string\"},\"code\":{\"type\":\"number\"},\"result\":{\"type\":\"object\",\"properties\":{\"data\":{\"type\":\"object\",\"properties\":{\"product_list\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"product_id\":{\"type\":\"number\"},\"product_name\":{\"type\":\"string\"},\"phase_list\":{\"type\":\"object\",\"properties\":{\"phase_id\":{\"type\":\"number\"},\"phase_name\":{\"type\":\"string\"}},\"required\":[\"phase_id\",\"phase_name\"]}},\"required\":[\"product_id\",\"product_name\",\"phase_list\"]}}},\"required\":[\"product_list\"]}}}}}",
+        "uid": 65,
+        "add_time": 1683702645,
+        "up_time": 1684227645,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/phase/menu",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [
+          "Andy"
+        ],
+        "_id": 2560,
+        "method": "GET",
+        "catid": 529,
+        "title": "获取全部階段選單",
+        "path": "/phase/menu",
+        "project_id": 53,
+        "req_params": [],
+        "res_body_type": "json",
+        "req_query": [],
+        "req_headers": [],
+        "req_body_form": [],
+        "desc": "",
+        "markdown": "",
+        "res_body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"msg\":{\"type\":\"string\"},\"code\":{\"type\":\"number\"},\"result\":{\"type\":\"object\",\"properties\":{\"phase_name\":{\"type\":\"string\"}},\"required\":[\"phase_name\"]}}}",
+        "uid": 65,
+        "add_time": 1683699815,
+        "up_time": 1684227712,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/product/menu",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 1,
+        "tag": [
+          "Andy"
+        ],
+        "_id": 2512,
+        "method": "GET",
+        "catid": 529,
+        "title": "获取全部产品選單(待定)",
+        "path": "/product/menu",
+        "project_id": 53,
+        "req_params": [],
+        "res_body_type": "json",
+        "uid": 24,
+        "add_time": 1683082800,
+        "up_time": 1684227714,
+        "req_query": [],
+        "req_headers": [],
+        "req_body_form": [],
+        "__v": 0,
+        "desc": "",
+        "markdown": "",
+        "res_body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"msg\":{\"type\":\"string\"},\"code\":{\"type\":\"number\"},\"result\":{\"type\":\"object\",\"properties\":{\"data\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"product_id\":{\"type\":\"number\"},\"product_name\":{\"type\":\"string\"}},\"required\":[\"product_id\",\"product_name\"]}}}}}}"
+      },
+      {
+        "query_path": {
+          "path": "/product/page",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 2,
+        "tag": [
+          "Andy"
+        ],
+        "_id": 2545,
+        "method": "GET",
+        "catid": 529,
+        "title": "获取产品阶段分頁列表",
+        "path": "/product/page",
+        "project_id": 53,
+        "req_params": [],
+        "res_body_type": "json",
+        "req_query": [
+          {
+            "required": "0",
+            "_id": "646189d021e9d8e11eeaffa8",
+            "name": "page_index",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "646189d021e9d81eb7eaffa7",
+            "name": "per_page",
+            "example": "",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "646189d021e9d86c29eaffa6",
+            "name": "product_name",
+            "example": "",
+            "desc": "foggy search"
+          }
+        ],
+        "req_headers": [],
+        "req_body_form": [],
+        "desc": "",
+        "markdown": "",
+        "res_body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"msg\":{\"type\":\"string\"},\"code\":{\"type\":\"number\"},\"result\":{\"type\":\"object\",\"properties\":{\"data\":{\"type\":\"object\",\"properties\":{\"product_list\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"product_id\":{\"type\":\"number\"},\"product_name\":{\"type\":\"string\"},\"update_time\":{\"type\":\"string\"},\"updater_name\":{\"type\":\"string\"},\"phase_list\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"phase_id\":{\"type\":\"number\"},\"phase_name\":{\"type\":\"string\"},\"update_time\":{\"type\":\"string\"},\"updater_name\":{\"type\":\"string\"}},\"required\":[\"phase_id\",\"phase_name\",\"update_time\",\"updater_name\"]}}},\"required\":[\"product_id\",\"product_name\",\"phase_list\",\"updater_name\",\"update_time\"]}}},\"required\":[\"product_list\"]},\"current_page\":{\"type\":\"number\"},\"page_count\":{\"type\":\"number\"},\"total_page\":{\"type\":\"number\"},\"total_count\":{\"type\":\"string\"}},\"required\":[\"current_page\",\"page_count\",\"total_page\",\"total_count\"]}}}",
+        "uid": 65,
+        "add_time": 1683271948,
+        "up_time": 1684227716,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/product",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 4,
+        "tag": [
+          "Andy"
+        ],
+        "_id": 2515,
+        "method": "POST",
+        "catid": 529,
+        "title": "新增产品",
+        "path": "/product",
+        "project_id": 53,
+        "req_params": [],
+        "res_body_type": "json",
+        "uid": 24,
+        "add_time": 1683083573,
+        "up_time": 1684227718,
+        "req_query": [],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "64618a1021e9d8c4a9eaffaa",
+            "name": "Content-Type",
+            "value": "application/x-www-form-urlencoded"
+          }
+        ],
+        "req_body_form": [
+          {
+            "required": "1",
+            "_id": "64618a1021e9d8d8e1eaffab",
+            "name": "product_name",
+            "type": "text"
+          }
+        ],
+        "__v": 0,
+        "desc": "",
+        "markdown": "",
+        "req_body_type": "form",
+        "res_body": "{\"type\":\"object\",\"title\":\"title\",\"properties\":{}}"
+      },
+      {
+        "query_path": {
+          "path": "/product",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 5,
+        "tag": [
+          "Andy"
+        ],
+        "_id": 2518,
+        "method": "PUT",
+        "catid": 529,
+        "title": "编辑产品",
+        "path": "/product",
+        "project_id": 53,
+        "req_params": [],
+        "res_body_type": "json",
+        "uid": 24,
+        "add_time": 1683083934,
+        "up_time": 1684227720,
+        "req_query": [],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "64619d8d21e9d81512eaffce",
+            "name": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "req_body_form": [
+          {
+            "required": "1",
+            "_id": "64619d8d21e9d818b3eaffd0",
+            "name": "product_id",
+            "type": "text"
+          },
+          {
+            "required": "0",
+            "_id": "64619d8d21e9d865e2eaffcf",
+            "name": "product_name",
+            "type": "text",
+            "example": "",
+            "desc": ""
+          }
+        ],
+        "__v": 0,
+        "desc": "",
+        "markdown": "",
+        "req_body_type": "json",
+        "res_body": "{\"type\":\"object\",\"title\":\"title\",\"properties\":{}}",
+        "req_body_other": "{\"type\":\"object\",\"title\":\"title\",\"properties\":{\"product_id\":{\"type\":\"number\",\"mock\":{\"mock\":\"3\"}},\"product_name\":{\"type\":\"string\",\"mock\":{\"mock\":\"XX\"}}},\"required\":[\"product_id\"]}"
+      },
+      {
+        "query_path": {
+          "path": "/product",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 6,
+        "tag": [
+          "Andy"
+        ],
+        "_id": 2533,
+        "method": "DELETE",
+        "catid": 529,
+        "title": "刪除產品",
+        "path": "/product",
+        "project_id": 53,
+        "req_params": [],
+        "res_body_type": "json",
+        "uid": 65,
+        "add_time": 1683099689,
+        "up_time": 1684227721,
+        "req_query": [
+          {
+            "required": "1",
+            "_id": "64618c2021e9d826c1eaffb5",
+            "name": "product_id",
+            "example": "1",
+            "desc": ""
+          }
+        ],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "64618c2021e9d84661eaffb6",
+            "name": "Content-Type",
+            "value": "application/x-www-form-urlencoded"
+          }
+        ],
+        "req_body_form": [],
+        "__v": 0,
+        "desc": "",
+        "markdown": "",
+        "req_body_other": "{\"type\":\"object\",\"title\":\"title\",\"properties\":{\"product_id\":{\"type\":\"number\"}},\"required\":[\"product_id\"]}",
+        "req_body_type": "form",
+        "res_body": "{\"type\":\"object\",\"title\":\"title\",\"properties\":{}}"
+      },
+      {
+        "query_path": {
+          "path": "/phase",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 7,
+        "tag": [
+          "Andy"
+        ],
+        "_id": 2536,
+        "method": "POST",
+        "catid": 529,
+        "title": "新增階段",
+        "path": "/phase",
+        "project_id": 53,
+        "req_params": [],
+        "res_body_type": "json",
+        "uid": 65,
+        "add_time": 1683099752,
+        "up_time": 1684227722,
+        "req_query": [],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "64618ced21e9d8978feaffb7",
+            "name": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "req_body_form": [],
+        "__v": 0,
+        "desc": "",
+        "markdown": "",
+        "req_body_other": "{\"type\":\"object\",\"title\":\"title\",\"properties\":{\"product_id\":{\"type\":\"number\",\"mock\":{\"mock\":\"2\"}},\"phase_name\":{\"type\":\"string\",\"mock\":{\"mock\":\"Proto1\"}},\"start_time\":{\"type\":\"string\",\"mock\":{\"mock\":\"2022-10-25 15:17:33\"}},\"end_time\":{\"type\":\"string\",\"mock\":{\"mock\":\"2022-10-25 15:17:50\"}}},\"required\":[\"phase_name\",\"start_time\",\"end_time\",\"product_id\"]}",
+        "req_body_type": "json",
+        "res_body": "{\"type\":\"object\",\"title\":\"title\",\"properties\":{}}"
+      },
+      {
+        "query_path": {
+          "path": "/phase",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 8,
+        "tag": [
+          "Andy"
+        ],
+        "_id": 2539,
+        "method": "PUT",
+        "catid": 529,
+        "title": "修改階段",
+        "path": "/phase",
+        "project_id": 53,
+        "req_params": [],
+        "res_body_type": "json",
+        "uid": 65,
+        "add_time": 1683099897,
+        "up_time": 1684227724,
+        "req_query": [],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "64618d4321e9d872bdeaffb9",
+            "name": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "req_body_form": [],
+        "__v": 0,
+        "desc": "",
+        "markdown": "",
+        "req_body_other": "{\"type\":\"object\",\"title\":\"title\",\"properties\":{\"phase_id\":{\"type\":\"number\"},\"phase_name\":{\"type\":\"string\",\"mock\":{\"mock\":\"Proto2\"}},\"start_time\":{\"type\":\"string\",\"mock\":{\"mock\":\"2023-01-22 20:00:00\"}},\"end_time\":{\"type\":\"string\",\"mock\":{\"mock\":\"2023-01-22 22:00:00\"}}},\"required\":[\"phase_id\"]}",
+        "req_body_type": "json",
+        "res_body": ""
+      },
+      {
+        "query_path": {
+          "path": "/phase",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 9,
+        "tag": [
+          "Andy"
+        ],
+        "_id": 2542,
+        "method": "DELETE",
+        "catid": 529,
+        "title": "刪除階段",
+        "path": "/phase",
+        "project_id": 53,
+        "req_params": [],
+        "res_body_type": "json",
+        "uid": 65,
+        "add_time": 1683099996,
+        "up_time": 1684227725,
+        "req_query": [
+          {
+            "required": "1",
+            "_id": "64618d9521e9d89f05eaffbb",
+            "name": "phase_id",
+            "example": "1",
+            "desc": ""
+          }
+        ],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "64618d9521e9d81fafeaffbc",
+            "name": "Content-Type",
+            "value": "application/x-www-form-urlencoded"
+          }
+        ],
+        "req_body_form": [],
+        "__v": 0,
+        "desc": "",
+        "markdown": "",
+        "req_body_other": "{\"type\":\"object\",\"title\":\"title\",\"properties\":{\"phase_id\":{\"type\":\"number\"}},\"required\":[\"phase_id\"]}",
+        "req_body_type": "form",
+        "res_body": "{\"type\":\"object\",\"title\":\"title\",\"properties\":{}}"
+      }
+    ]
+  },
+  {
+    "index": 6,
+    "name": "線體工站",
+    "desc": null,
+    "add_time": 1684487824,
+    "up_time": 1684487824,
+    "list": [
+      {
+        "query_path": {
+          "path": "/line/big_line",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "undone",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 2581,
+        "method": "PUT",
+        "catid": 538,
+        "title": "修改大線體",
+        "path": "/line/big_line",
+        "project_id": 53,
+        "req_params": [],
+        "res_body_type": "json",
+        "uid": 65,
+        "add_time": 1684737278,
+        "up_time": 1684737327,
+        "req_query": [
+          {
+            "required": "1",
+            "_id": "646b0d2f21e9d822ddeb0099",
+            "name": "big_line_id",
+            "desc": ""
+          }
+        ],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "646b0d2f21e9d820c5eb009a",
+            "name": "Content-Type",
+            "value": "application/x-www-form-urlencoded"
+          }
+        ],
+        "req_body_form": [
+          {
+            "required": "0",
+            "_id": "646b0d2f21e9d8ba22eb009c",
+            "name": "big_line_name",
+            "type": "text"
+          },
+          {
+            "required": "0",
+            "_id": "646b0d2f21e9d8d78aeb009b",
+            "name": "floor",
+            "type": "text",
+            "example": "",
+            "desc": ""
+          }
+        ],
+        "__v": 0,
+        "desc": "",
+        "markdown": "",
+        "req_body_type": "form",
+        "res_body": ""
+      },
+      {
+        "query_path": {
+          "path": "/line/small_line",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "undone",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 2590,
+        "method": "PUT",
+        "catid": 538,
+        "title": "修改小線體",
+        "path": "/line/small_line",
+        "project_id": 53,
+        "req_params": [],
+        "res_body_type": "json",
+        "uid": 65,
+        "add_time": 1684738688,
+        "up_time": 1684738748,
+        "req_query": [
+          {
+            "required": "1",
+            "_id": "646b12bc21e9d8e1eeeb00bc",
+            "name": "small_line_id",
+            "desc": ""
+          }
+        ],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "646b12bc21e9d80eebeb00bd",
+            "name": "Content-Type",
+            "value": "application/x-www-form-urlencoded"
+          }
+        ],
+        "req_body_form": [
+          {
+            "required": "0",
+            "_id": "646b12bc21e9d8b199eb00c0",
+            "name": "small_line_name",
+            "type": "text"
+          },
+          {
+            "required": "0",
+            "_id": "646b12bc21e9d8f368eb00bf",
+            "name": "uph",
+            "type": "text",
+            "example": "",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "646b12bc21e9d8acaeeb00be",
+            "name": "line_qty",
+            "type": "text",
+            "example": "",
+            "desc": ""
+          }
+        ],
+        "__v": 0,
+        "desc": "",
+        "markdown": "",
+        "req_body_type": "form",
+        "res_body": ""
+      },
+      {
+        "query_path": {
+          "path": "/station",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "undone",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 2599,
+        "method": "PUT",
+        "catid": 538,
+        "title": "修改工站",
+        "path": "/station",
+        "project_id": 53,
+        "req_params": [],
+        "res_body_type": "json",
+        "uid": 65,
+        "add_time": 1684739232,
+        "up_time": 1684891550,
+        "req_query": [
+          {
+            "required": "1",
+            "_id": "646d679e21e9d8137feb00f0",
+            "name": "station_id",
+            "desc": ""
+          }
+        ],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "646d679e21e9d87fd3eb00f1",
+            "name": "Content-Type",
+            "value": "application/x-www-form-urlencoded"
+          }
+        ],
+        "req_body_form": [
+          {
+            "required": "0",
+            "_id": "646d679e21e9d82a66eb00f6",
+            "name": "station_name",
+            "type": "text",
+            "desc": "需要與partnumber那邊維護好的工站數據進行校驗"
+          },
+          {
+            "required": "0",
+            "_id": "646d679e21e9d849aeeb00f5",
+            "name": "station_type",
+            "type": "text",
+            "example": "",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "646d679e21e9d839fdeb00f4",
+            "name": "function",
+            "type": "text",
+            "example": "",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "646d679e21e9d87d22eb00f3",
+            "name": "fxdri",
+            "type": "text",
+            "example": "",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "646d679e21e9d89a33eb00f2",
+            "name": "test_rule",
+            "type": "text",
+            "example": "",
+            "desc": ""
+          }
+        ],
+        "__v": 0,
+        "desc": "",
+        "markdown": "",
+        "req_body_type": "form",
+        "res_body": ""
+      },
+      {
+        "query_path": {
+          "path": "/line/big_line",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "undone",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 2584,
+        "method": "DELETE",
+        "catid": 538,
+        "title": "刪除大線體",
+        "path": "/line/big_line",
+        "project_id": 53,
+        "req_params": [],
+        "res_body_type": "json",
+        "uid": 65,
+        "add_time": 1684737359,
+        "up_time": 1684737371,
+        "req_query": [
+          {
+            "required": "1",
+            "_id": "646b0d5b21e9d8767eeb009e",
+            "name": "big_line_id",
+            "desc": ""
+          }
+        ],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "646b0d5b21e9d8149eeb009f",
+            "name": "Content-Type",
+            "value": "application/x-www-form-urlencoded"
+          }
+        ],
+        "req_body_form": [],
+        "__v": 0,
+        "desc": "",
+        "markdown": "",
+        "req_body_type": "form",
+        "res_body": ""
+      },
+      {
+        "query_path": {
+          "path": "/line/small_line",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "undone",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 2593,
+        "method": "DELETE",
+        "catid": 538,
+        "title": "刪除小線體",
+        "path": "/line/small_line",
+        "project_id": 53,
+        "req_params": [],
+        "res_body_type": "json",
+        "uid": 65,
+        "add_time": 1684738786,
+        "up_time": 1684739066,
+        "req_query": [
+          {
+            "required": "1",
+            "_id": "646b13fa21e9d8b66beb00c1",
+            "name": "small_line_id",
+            "desc": ""
+          }
+        ],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "646b13fa21e9d80d46eb00c2",
+            "name": "Content-Type",
+            "value": "application/x-www-form-urlencoded"
+          }
+        ],
+        "req_body_form": [],
+        "__v": 0,
+        "desc": "",
+        "markdown": "",
+        "req_body_type": "form",
+        "res_body": ""
+      },
+      {
+        "query_path": {
+          "path": "/station",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "undone",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 2602,
+        "method": "DELETE",
+        "catid": 538,
+        "title": "刪除工站",
+        "path": "/station",
+        "project_id": 53,
+        "req_params": [],
+        "res_body_type": "json",
+        "uid": 65,
+        "add_time": 1684739425,
+        "up_time": 1684739461,
+        "req_query": [
+          {
+            "required": "1",
+            "_id": "646b158521e9d82a82eb00d4",
+            "name": "station_id",
+            "desc": ""
+          }
+        ],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "646b158521e9d87915eb00d5",
+            "name": "Content-Type",
+            "value": "application/x-www-form-urlencoded"
+          }
+        ],
+        "req_body_form": [],
+        "__v": 0,
+        "desc": "",
+        "markdown": "",
+        "req_body_type": "form",
+        "res_body": ""
+      },
+      {
+        "query_path": {
+          "path": "/line/big_line",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "undone",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 2578,
+        "method": "POST",
+        "catid": 538,
+        "title": "添加大線體",
+        "path": "/line/big_line",
+        "project_id": 53,
+        "req_params": [],
+        "res_body_type": "json",
+        "uid": 65,
+        "add_time": 1684737108,
+        "up_time": 1684979511,
+        "req_query": [],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "646ebf3721e9d8646aeb011c",
+            "name": "Content-Type",
+            "value": "application/x-www-form-urlencoded"
+          }
+        ],
+        "req_body_form": [
+          {
+            "required": "1",
+            "_id": "646ebf3721e9d8f3b1eb0123",
+            "name": "big_line_name",
+            "type": "text"
+          },
+          {
+            "required": "1",
+            "_id": "646ebf3721e9d8f0b1eb0122",
+            "name": "product_name",
+            "type": "text",
+            "example": "",
+            "desc": ""
+          },
+          {
+            "required": "1",
+            "_id": "646ebf3721e9d84d53eb0121",
+            "name": "phase_name",
+            "type": "text",
+            "example": "",
+            "desc": ""
+          },
+          {
+            "required": "1",
+            "_id": "646ebf3721e9d810afeb0120",
+            "name": "floor",
+            "type": "text",
+            "example": "",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "646ebf3721e9d8bb4beb011f",
+            "name": "clone_from_product",
+            "type": "text",
+            "example": "",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "646ebf3721e9d86874eb011e",
+            "name": "clone_from_phase",
+            "type": "text",
+            "example": "",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "646ebf3721e9d88604eb011d",
+            "name": "clone_from_bigline",
+            "type": "text",
+            "example": "",
+            "desc": ""
+          }
+        ],
+        "__v": 0,
+        "desc": "",
+        "markdown": "",
+        "req_body_type": "form",
+        "res_body": "{\"type\":\"object\",\"title\":\"title\",\"properties\":{}}"
+      },
+      {
+        "query_path": {
+          "path": "/line/small_line",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "undone",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 2587,
+        "method": "POST",
+        "catid": 538,
+        "title": "添加小線體",
+        "path": "/line/small_line",
+        "project_id": 53,
+        "req_params": [],
+        "res_body_type": "json",
+        "uid": 65,
+        "add_time": 1684737418,
+        "up_time": 1684743198,
+        "req_query": [
+          {
+            "required": "1",
+            "_id": "646b241e21e9d84f71eb00d6",
+            "name": "big_line_id",
+            "desc": ""
+          }
+        ],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "646b241e21e9d88195eb00d7",
+            "name": "Content-Type",
+            "value": "application/x-www-form-urlencoded"
+          }
+        ],
+        "req_body_form": [
+          {
+            "required": "1",
+            "_id": "646b241e21e9d893d9eb00da",
+            "name": "small_line_name",
+            "type": "text"
+          },
+          {
+            "required": "1",
+            "_id": "646b241e21e9d84e26eb00d9",
+            "name": "uph",
+            "type": "text",
+            "example": "",
+            "desc": ""
+          },
+          {
+            "required": "1",
+            "_id": "646b241e21e9d803eceb00d8",
+            "name": "line_qty",
+            "type": "text",
+            "example": "",
+            "desc": ""
+          }
+        ],
+        "__v": 0,
+        "desc": "",
+        "markdown": "",
+        "req_body_type": "form",
+        "res_body": "{\"type\":\"object\",\"title\":\"title\",\"properties\":{}}"
+      },
+      {
+        "query_path": {
+          "path": "/station",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "undone",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 2596,
+        "method": "POST",
+        "catid": 538,
+        "title": "添加工站",
+        "path": "/station",
+        "project_id": 53,
+        "req_params": [],
+        "res_body_type": "json",
+        "uid": 65,
+        "add_time": 1684739093,
+        "up_time": 1684891560,
+        "req_query": [
+          {
+            "required": "1",
+            "_id": "646d67a821e9d81a54eb00f7",
+            "name": "small_line_id",
+            "desc": ""
+          }
+        ],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "646d67a821e9d85570eb00f8",
+            "name": "Content-Type",
+            "value": "application/x-www-form-urlencoded"
+          }
+        ],
+        "req_body_form": [
+          {
+            "required": "1",
+            "_id": "646d67a821e9d80885eb00fe",
+            "name": "station_name",
+            "type": "text",
+            "desc": "需要與partnumber那邊維護好工站數據進行校驗"
+          },
+          {
+            "required": "1",
+            "_id": "646d67a821e9d86768eb00fd",
+            "name": "station_type",
+            "type": "text",
+            "example": "",
+            "desc": ""
+          },
+          {
+            "required": "1",
+            "_id": "646d67a821e9d8fb85eb00fc",
+            "name": "fuction",
+            "type": "text",
+            "example": "",
+            "desc": ""
+          },
+          {
+            "required": "1",
+            "_id": "646d67a821e9d8d33beb00fb",
+            "name": "fxdri",
+            "type": "text",
+            "example": "",
+            "desc": ""
+          },
+          {
+            "required": "1",
+            "_id": "646d67a821e9d8d050eb00fa",
+            "name": "test_rule",
+            "type": "text",
+            "example": "",
+            "desc": ""
+          },
+          {
+            "required": "1",
+            "_id": "646d67a821e9d82493eb00f9",
+            "name": "station_per_line",
+            "type": "text",
+            "example": "",
+            "desc": ""
+          }
+        ],
+        "__v": 0,
+        "desc": "",
+        "markdown": "",
+        "req_body_type": "form",
+        "res_body": "{\"type\":\"object\",\"title\":\"title\",\"properties\":{}}"
+      },
+      {
+        "query_path": {
+          "path": "/line_staion/page",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "undone",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 2575,
+        "method": "GET",
+        "catid": 538,
+        "title": "獲取線體工站列表",
+        "path": "/line_staion/page",
+        "project_id": 53,
+        "req_params": [],
+        "res_body_type": "json",
+        "uid": 65,
+        "add_time": 1684487881,
+        "up_time": 1684985336,
+        "req_query": [
+          {
+            "required": "0",
+            "_id": "646ed5f821e9d864e4eb012a",
+            "name": "product_id",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "646ed5f821e9d8d08ceb0129",
+            "name": "phase_id",
+            "example": "",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "646ed5f821e9d8f573eb0128",
+            "name": "big_line_id",
+            "example": "",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "646ed5f821e9d81008eb0127",
+            "name": "page_index",
+            "example": "",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "646ed5f821e9d89001eb0126",
+            "name": "per_page",
+            "example": "",
+            "desc": ""
+          }
+        ],
+        "req_headers": [],
+        "req_body_form": [],
+        "__v": 0,
+        "desc": "",
+        "markdown": "",
+        "res_body": "{\"type\":\"object\",\"title\":\"title\",\"properties\":{\"current_page\":{\"type\":\"number\"},\"page_count\":{\"type\":\"number\"},\"total_page\":{\"type\":\"number\"},\"total_count\":{\"type\":\"number\"},\"big_line_list\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"big_line_id\":{\"type\":\"number\"},\"big_line_name\":{\"type\":\"string\"},\"product_id\":{\"type\":\"number\"},\"product_name\":{\"type\":\"string\"},\"phase_id\":{\"type\":\"number\"},\"phase_name\":{\"type\":\"string\"},\"floor\":{\"type\":\"string\"},\"version_id\":{\"type\":\"number\"},\"version_name\":{\"type\":\"string\"},\"create_by\":{\"type\":\"string\"},\"create_time\":{\"type\":\"string\"},\"update_by\":{\"type\":\"string\"},\"update_time\":{\"type\":\"string\"},\"small_line_list\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"small_line_id\":{\"type\":\"number\"},\"small_line_name\":{\"type\":\"string\"},\"uph\":{\"type\":\"number\"},\"line_qty\":{\"type\":\"number\"},\"create_by\":{\"type\":\"string\"},\"create_time\":{\"type\":\"string\"},\"update_by\":{\"type\":\"string\"},\"update_time\":{\"type\":\"string\"},\"station_list\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"station_id\":{\"type\":\"number\"},\"station_name\":{\"type\":\"string\"},\"station_type\":{\"type\":\"string\"},\"test_rule\":{\"type\":\"string\"},\"function\":{\"type\":\"string\"},\"fxdri\":{\"type\":\"string\"},\"station_per_line\":{\"type\":\"number\"}},\"required\":[\"station_id\",\"station_name\",\"station_type\",\"test_rule\",\"function\",\"fxdri\",\"station_per_line\"]}}},\"required\":[\"small_line_id\",\"small_line_name\",\"uph\",\"line_qty\",\"create_by\",\"create_time\",\"update_by\",\"update_time\",\"station_list\"]}}},\"required\":[\"big_line_id\",\"big_line_name\",\"product_id\",\"product_name\",\"phase_id\",\"phase_name\",\"floor\",\"version_id\",\"version_name\",\"create_by\",\"create_time\",\"update_by\",\"update_time\",\"small_line_list\"]}}},\"required\":[\"current_page\",\"page_count\",\"total_page\",\"total_count\",\"big_line_list\"]}"
+      },
+      {
+        "query_path": {
+          "path": "/product_phase/clone",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 3,
+        "tag": [
+          "Andy"
+        ],
+        "_id": 2551,
+        "method": "POST",
+        "catid": 538,
+        "title": "克隆版本",
+        "path": "/product_phase/clone",
+        "project_id": 53,
+        "req_params": [],
+        "res_body_type": "json",
+        "uid": 65,
+        "add_time": 1683275719,
+        "up_time": 1685079608,
+        "req_query": [],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "6470463821e9d87ef4eb018e",
+            "name": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "req_body_form": [],
+        "__v": 0,
+        "desc": "",
+        "markdown": "",
+        "req_body_other": "{\"type\":\"object\",\"title\":\"title\",\"properties\":{\"product_name\":{\"type\":\"string\"},\"phase_name\":{\"type\":\"string\"},\"big_line_name\":{\"type\":\"string\"}},\"required\":[\"product_name\",\"phase_name\",\"big_line_name\"]}",
+        "req_body_type": "json",
+        "res_body": "{\"type\":\"object\",\"title\":\"title\",\"properties\":{\"version_id\":{\"type\":\"number\"},\"product_id\":{\"type\":\"number\"},\"phase_id\":{\"type\":\"number\"},\"product_name\":{\"type\":\"string\"},\"phase_name\":{\"type\":\"string\"},\"version_name\":{\"type\":\"string\"},\"start_time\":{\"type\":\"string\"},\"end_time\":{\"type\":\"string\"},\"lines\":{\"type\":\"object\",\"properties\":{}}},\"required\":[\"version_id\",\"phase_id\",\"product_name\",\"phase_name\",\"lines\",\"start_time\",\"end_time\",\"version_name\",\"product_id\"]}"
+      }
+    ]
+  }
+]
